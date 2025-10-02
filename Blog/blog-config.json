@@ -1,0 +1,158 @@
+{
+  "settings": {
+    "title": "Cyber Intelligence Hub",
+    "description": "Interactive cybersecurity blog integrated with Rokkam Vamshi's main portfolio",
+    "version": "2.1.0",
+    "lastUpdated": "2025-10-02",
+    "autoSort": "by-week",
+    "nextWeekId": "week11",
+    "integration": {
+      "mainPortfolio": "../index.html#blog",
+      "jarvisSupport": true,
+      "keyboardShortcuts": ["Ctrl+B"],
+      "crossNavigation": true
+    }
+  },
+  "sectors": {
+    "general": {
+      "name": "CYBERSECURITY INTELLIGENCE", 
+      "description": "Security research and analysis",
+      "color": "#00f5ff",
+      "threshold": 0
+    }
+  },
+  "template": {
+    "title": "Your Blog Title Here",
+    "description": "Brief description of your blog post content and key learning points",
+    "blogUrl": "https://medium.com/@rokkamvamshi18/your-article-url",
+    "sector": "general",
+    "date": "YYYY-MM-DD",
+    "difficulty": 3,
+    "readTime": "10 min read",
+    "topics": ["Topic1", "Topic2", "Topic3"],
+    "category": "web-security",
+    "status": "published"
+  },
+  "posts": {
+    "week1": {
+      "title": "Week 1 ",
+      "description": "Foundational topics: OSI Model, TCP/IP stack, Subnetting, and DNS.",
+      "blogUrl": "https://iamaangx028.medium.com/week-1-learning-basic-concepts-of-cybersecurity-417434e71752",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["OSI Model", "TCP/IP", "Subnetting", "DNS"],
+      "category": "network-security",
+      "status": "published"
+    },
+    "week2": {
+      "title": "Week 2 ",
+      "description": "Networking fundamentals: PAN/LAN/VLAN/WLAN/CAN/SAN/MAN/WAN, hubs/switches/routers/modems, Bluetooth/Wi‑Fi security, ARP poisoning, SSL/TLS.",
+      "blogUrl": "https://iamaangx028.medium.com/week-2-learning-basic-concepts-of-cybersecurity-6e7fd6d57bbf",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Networks", "Hubs", "Switches", "Routers", "SSL/TLS", "ARP"],
+      "category": "network-security",
+      "status": "published"
+    },
+    "week3": {
+      "title": "Week 3",
+      "description": "Browsers and the Web: Internet vs WWW, browser evolution and architecture, rendering pipeline (DOM/CSSOM/JS), omnibox.",
+      "blogUrl": "https://iamaangx028.medium.com/week-3-learning-basic-concepts-of-cybersecurity-c68a72096e07",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Browsers", "Rendering", "DOM", "CSSOM", "Omnibox"],
+      "category": "browser-security",
+      "status": "published"
+    },
+    "week4": {
+      "title": "Week 4",
+      "description": "Browser security: isolated storage per origin, subresource integrity, cookie attributes (SameSite/HttpOnly/Secure), strict MIME type checking, clickjacking defense.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Cookies", "SRI", "MIME", "Clickjacking", "SOP"],
+      "category": "browser-security",
+      "status": "published"
+    },
+    "week5": {
+      "title": "Week 5 ",
+      "description": "Web fundamentals: HTTP evolution (0.9 to 3.0), TLS/SSL history, content negotiation, caching and headers.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["HTTP", "TLS", "Content Negotiation", "Caching"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week6": {
+      "title": "Week 6 ",
+      "description": "System design basics: proxies, reverse proxies, latency, REST/SOAP APIs, CDNs, WebSockets, webhooks, microservices, message queues, API gateway, rate limiting, idempotency, servers.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Proxies", "APIs", "CDN", "WebSockets", "Microservices"],
+      "category": "infrastructure-security",
+      "status": "published"
+    },
+    "week7": {
+      "title": "Week 7 ",
+      "description": "Web app architecture: client‑server, monoliths, microservices, serverless, MVC, SOA, SPA fundamentals.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Architecture", "Client-Server", "Microservices", "Serverless", "MVC", "SPA"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week8": {
+      "title": "Week 8 ",
+      "description": "HTTP headers deep dive: request/response classes, auth headers, CORS, representation headers, cookies/state, caching, HSTS, and key security headers.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["HTTP Headers", "CORS", "HSTS", "CSP", "Caching"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week9": {
+      "title": "Week 9",
+      "description": "Front‑end and back‑end overview: static→dynamic web, CGI to application servers, backend languages/frameworks, app servers, front‑end frameworks and meta‑frameworks.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Front-end", "Back-end", "Frameworks", "App Servers", "CGI"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week10": {
+      "title": "Week 10—Learning Basic Concepts of Cybersecurity",
+      "description": "Front‑end concepts: Vanilla JS, JSX, AJAX, components, and SPA routing basics.",
+      "blogUrl": "",
+      "sector": "general",
+      "date": "",
+      "difficulty": null,
+      "readTime": null,
+      "topics": ["Vanilla JS", "JSX", "AJAX", "Components", "Routing", "SPA"],
+      "category": "web-development",
+      "status": "published"
+    }
+  }
+  }

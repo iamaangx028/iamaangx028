@@ -1,0 +1,2888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Researcher - iamaangx028</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="iamaangx028 - Cybersecurity Researcher with expertise in penetration testing, bug bounty hunting, and vulnerability research. Discover my projects and skills.">
+    <meta name="keywords" content="cybersecurity, penetration testing, bug bounty, CTF, ethical hacking, security researcher, iamaangx028">
+    <meta name="author" content="iamaangx028">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="iamaangx028 - Cybersecurity Researcher">
+    <meta property="og:description" content="Cybersecurity Researcher with expertise in web security, API testing, and vulnerability research.">
+    <meta property="og:image" content="https://iamaangx028.github.io/">
+    <meta property="og:url" content="https://iamaangx028.github.io/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="iamaangx028 - Cybersecurity Researcher">
+    <meta name="twitter:description" content="Cybersecurity Researcher with expertise in web security, API testing, and vulnerability research.">
+    <meta name="twitter:image" content="https://iamaangx028.github.io/">
+    
+    <!-- imports-->
+    <link rel="stylesheet" href="css/jarvis.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resume.css ">
+    <link rel="stylesheet" href="css/orgs.css">
+    <link rel="stylesheet" href="css/all.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon-svg.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://iamaangx028.github.io/">
+    
+    <!-- Rest of your head content -->
+    <link rel="preconnect" href="https://fonEDUCATIONts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Advanced J.A.R.V.I.S. Widget Styles -->
+    <style>
+        /* Advanced J.A.R.V.I.S. Variables */
+        :root {
+            --jarvis-primary: #00f5ff;
+            --jarvis-secondary: #0080ff;
+            --jarvis-accent: #64ffda;
+            --jarvis-warning: #ff6b35;
+            --jarvis-success: #4caf50;
+            --jarvis-bg-primary: rgba(0, 8, 20, 0.98);
+            --jarvis-bg-secondary: rgba(0, 20, 40, 0.95);
+            --jarvis-glass: rgba(0, 245, 255, 0.05);
+            --jarvis-border: rgba(0, 245, 255, 0.3);
+            --jarvis-glow: 0 0 30px rgba(0, 245, 255, 0.5);
+            --jarvis-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+            --jarvis-text: #ffffff;
+            --jarvis-text-dim: #b0bec5;
+        }
+
+        /* Advanced Widget Container */
+        .jarvis-container {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 999999;
+            font-family: 'Quantico', sans-serif;
+            user-select: none;
+        }
+
+        /* Futuristic Activation Button */
+        .jarvis-activator {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--jarvis-primary), var(--jarvis-secondary));
+            border: 2px solid var(--jarvis-accent);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-shadow: var(--jarvis-glow), var(--jarvis-shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .jarvis-activator:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 0 40px rgba(0, 245, 255, 0.8), var(--jarvis-shadow);
+        }
+
+        .jarvis-activator::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, var(--jarvis-accent), transparent);
+            animation: jarvisSpin 3s linear infinite;
+            opacity: 0.7;
+        }
+
+        .jarvis-activator::after {
+            content: 'J';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            font-weight: bold;
+            color: var(--jarvis-text);
+            text-shadow: 0 0 20px var(--jarvis-accent);
+            z-index: 2;
+        }
+
+        .jarvis-core {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 47px;
+            height: 47px;
+            background: var(--jarvis-bg-primary);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Advanced Holographic Interface */
+        .jarvis-interface {
+            position: absolute;
+            bottom: 90px;
+            right: 0;
+            width: 320px;
+            height: 520px;
+            background: var(--jarvis-bg-primary);
+            border: 1px solid var(--jarvis-border);
+            border-radius: 16px;
+            box-shadow: var(--jarvis-glow), var(--jarvis-shadow);
+            backdrop-filter: blur(20px);
+            opacity: 0;
+            transform: translateY(30px) scale(0.9);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: none;
+            overflow: hidden;
+        }
+
+        .jarvis-interface.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .jarvis-interface::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                transparent 30%, 
+                rgba(0, 245, 255, 0.05) 50%, 
+                transparent 70%);
+            animation: jarvisHologram 4s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        /* Advanced Header with System Status */
+        .jarvis-header {
+            padding: 16px 18px;
+            background: linear-gradient(135deg, 
+                rgba(0, 245, 255, 0.1), 
+                rgba(0, 128, 255, 0.05));
+            border-bottom: 1px solid var(--jarvis-border);
+            position: relative;
+        }
+
+        .jarvis-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .jarvis-logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--jarvis-accent);
+            text-shadow: 0 0 15px var(--jarvis-accent);
+            letter-spacing: 2px;
+        }
+
+        .jarvis-power {
+            width: 32px;
+            height: 32px;
+            border: 1px solid var(--jarvis-border);
+            border-radius: 8px;
+            background: var(--jarvis-glass);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--jarvis-accent);
+            transition: all 0.3s ease;
+        }
+
+        .jarvis-power:hover {
+            background: rgba(255, 107, 53, 0.2);
+            border-color: var(--jarvis-warning);
+            color: var(--jarvis-warning);
+        }
+
+        .jarvis-status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
+            font-size: 11px;
+            color: var(--jarvis-text-dim);
+        }
+
+        .jarvis-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .jarvis-stat-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--jarvis-success);
+            box-shadow: 0 0 8px var(--jarvis-success);
+            animation: jarvisPulse 2s ease-in-out infinite;
+        }
+
+        /* Advanced Chat Interface */
+        .jarvis-chat {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .jarvis-messages {
+            flex: 1;
+            max-height: 170px;
+            overflow-y: auto;
+            padding: 12px 16px;
+            scrollbar-width: thin;
+            scrollbar-color: var(--jarvis-accent) transparent;
+        }
+
+        .jarvis-messages::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .jarvis-messages::-webkit-scrollbar-thumb {
+            background: var(--jarvis-accent);
+            border-radius: 2px;
+        }
+
+        .jarvis-message {
+            margin-bottom: 12px;
+            animation: jarvisMessageSlide 0.5s ease-out;
+        }
+
+        .jarvis-message-content {
+            background: var(--jarvis-glass);
+            border: 1px solid var(--jarvis-border);
+            border-radius: 12px;
+            padding: 12px 16px;
+            color: var(--jarvis-text);
+            font-size: 13px;
+            line-height: 1.5;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .jarvis-message.assistant .jarvis-message-content {
+            background: linear-gradient(135deg, 
+                rgba(0, 245, 255, 0.15), 
+                rgba(100, 255, 218, 0.05));
+            border-left: 3px solid var(--jarvis-accent);
+        }
+
+        .jarvis-message.user .jarvis-message-content {
+            background: linear-gradient(135deg, 
+                rgba(0, 128, 255, 0.15), 
+                rgba(0, 80, 255, 0.05));
+            border-left: 3px solid var(--jarvis-secondary);
+            margin-left: 40px;
+        }
+
+        /* Advanced Quick Actions Panel */
+        .jarvis-actions {
+            padding: 18px 20px 80px 20px;
+            border-top: 1px solid var(--jarvis-border);
+            background: var(--jarvis-bg-secondary);
+            min-height: 210px;
+        }
+
+        .jarvis-actions-title {
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: var(--jarvis-accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            padding-bottom: 16px;
+            border-bottom: 1px dashed var(--jarvis-border);
+            text-shadow: 0 0 10px var(--jarvis-accent);
+        }
+
+        .jarvis-action-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .jarvis-action-btn {
+            background: var(--jarvis-glass);
+            border: 1px solid var(--jarvis-border);
+            border-radius: 8px;
+            padding: 6px 4px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            position: relative;
+            overflow: hidden;
+            min-height: 45px;
+            max-height: 45px;
+        }
+
+        .jarvis-action-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(0, 245, 255, 0.3), 
+                transparent);
+            transition: left 0.6s ease;
+        }
+
+        .jarvis-action-btn:hover {
+            background: rgba(0, 245, 255, 0.1);
+            border-color: var(--jarvis-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.3);
+        }
+
+        .jarvis-action-btn:hover::before {
+            left: 100%;
+        }
+
+        .jarvis-action-icon {
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, var(--jarvis-accent), var(--jarvis-secondary));
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: var(--jarvis-text);
+            box-shadow: 0 3px 12px rgba(0, 245, 255, 0.4);
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .jarvis-action-label {
+            color: var(--jarvis-text);
+            font-size: 8px;
+            font-weight: 600;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            line-height: 1.2;
+        }
+
+        /* Typing Indicator */
+        .jarvis-typing {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--jarvis-accent);
+            font-size: 11px;
+            padding: 8px 20px;
+        }
+
+        .jarvis-typing-dots {
+            display: flex;
+            gap: 4px;
+        }
+
+        .jarvis-typing-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--jarvis-accent);
+            border-radius: 50%;
+            animation: jarvisTyping 1.4s infinite ease-in-out;
+        }
+
+        .jarvis-typing-dot:nth-child(1) { animation-delay: 0s; }
+        .jarvis-typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .jarvis-typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        /* Advanced Animations */
+        @keyframes jarvisSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes jarvisHologram {
+            0%, 100% { opacity: 0.3; transform: translateX(-100%); }
+            50% { opacity: 1; transform: translateX(100%); }
+        }
+
+        @keyframes jarvisPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.8); }
+        }
+
+        @keyframes jarvisMessageSlide {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes jarvisTyping {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        /* Notification System */
+        .jarvis-notification {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 20px;
+            height: 20px;
+            background: var(--jarvis-warning);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: bold;
+            color: white;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .jarvis-notification.active {
+            transform: scale(1);
+            animation: jarvisPulse 2s infinite;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .jarvis-container {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .jarvis-interface {
+                width: calc(100vw - 40px);
+                max-width: 380px;
+                height: 480px;
+                right: 0;
+            }
+            
+            .jarvis-chat {
+                height: 220px;
+            }
+            
+            .jarvis-messages {
+                max-height: 180px;
+                padding: 12px 16px;
+            }
+            
+            .jarvis-activator {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .jarvis-action-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            
+            .jarvis-action-btn {
+                flex-direction: row;
+                justify-content: flex-start;
+                min-height: 55px;
+                max-height: 55px;
+                padding: 10px 14px;
+                gap: 12px;
+            }
+            
+            .jarvis-action-icon {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+            
+            .jarvis-action-label {
+                font-size: 12px;
+                text-align: left;
+            }
+            
+            .jarvis-actions {
+                padding: 24px 26px 70px 26px;
+                min-height: 360px;
+            }
+        }
+
+        /* System Integration Effects */
+        .jarvis-scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--jarvis-accent), transparent);
+            animation: jarvisScanLine 2s linear infinite;
+        }
+
+        @keyframes jarvisScanLine {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(520px); }
+        }
+    </style>
+
+</head>
+<a href="#main" class="skip-link">Skip to main content</a>
+    <!-- Navigation -->
+    <nav class="nav-container" role="navigation" aria-label="Main Navigation">
+        <a href="#" class="nav-logo" aria-label="iamaangx028 Logo">   
+        <div class="logo-icon">
+            <div class="logo-inner"></div>
+            <div class="logo-outer"></div>
+        </div>
+        <span class="logo-text">IAMAANGX028</span>
+    </a>
+        
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link">HOME</a>
+            <a href="#about" class="nav-link">ABOUT</a>
+            <a href="#resume" class="nav-link">RESUME</a>
+            <a href="#projects" class="nav-link">PROJECTS</a>
+            <a href="#skills" class="nav-link">SKILLS</a>
+            <a href="#credentials" class="nav-link">CREDENTIALS</a>
+            <a href="#trophies" class="nav-link">BUG BOUNTY</a>
+            <!-- <a href="#blog" class="nav-link">BLOGS</a> -->
+            <a href="#events" class="nav-link">EVENTS</a>
+            <a href="#contact" class="nav-link">CONTACT ME</a>
+            <a href="Blog/cyber-blog.html" class="nav-link nav-link-external" target="_self">CYBER BLOG</a>
+        </div>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </nav>
+
+    <!-- Hero Section - The Briefing Room -->
+     
+    <section class="hero-section" id="home"  role="banner">
+        <div class="security-mesh"></div>
+        
+        <div class="terminal-auth">
+            <div class="terminal-line-1">$ AUTHENTICATING USER...</div>
+            <div class="terminal-line-2">$ ACCESS GRANTED...</div>
+            <div class="terminal-line-3">$ WELCOME TO IAMAANGX028 SHELL v1.0</div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="profile-info">
+                <h1>IAMAANGX028</h1>
+                <div class="title-underline"></div>
+                <h2>Security Researcher | Bug Hunter | CTF Player</h2>
+                <p>
+                    A Security Researcher focused on offensive security and vulnerability research. Recognized by multiple organizations in the public and private sectors for responsible security disclosures and contributions to improving digital infrastructure security.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cta-primary hire-me-btn">
+                        <span>HIRE ME</span>
+                        <span class="icon">→</span>
+                    </a>
+                    <a href="#projects" class="cta-primary">
+                        <span>VIEW PROJECTS</span>
+                        <span class="icon">→</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="profile-image-container">
+                <div class="profile-image">
+                    <!-- Replace with your actual image -->
+                    <img src="/images/removebg-preview.png" alt="Rokkam Vamshi" loading="lazy">
+                </div>
+                
+                <!-- HUD Frame -->
+                <svg class="hud-frame" viewBox="0 0 300 300">
+                    <!-- Corner brackets -->
+                    <path d="M0,30 L0,0 L30,0" class="hud-corner" />
+                    <path d="M270,0 L300,0 L300,30" class="hud-corner" />
+                    <path d="M300,270 L300,300 L270,300" class="hud-corner" />
+                    <path d="M30,300 L0,300 L0,270" class="hud-corner" />
+                    
+                    <!-- HUD Elements -->
+                    <rect x="0" y="140" width="20" height="20" class="hud-marker" />
+                    <rect x="280" y="140" width="20" height="20" class="hud-marker" />
+                    <rect x="140" y="0" width="20" height="20" class="hud-marker" />
+                    <rect x="140" y="280" width="20" height="20" class="hud-marker" />
+                    
+                    <!-- Data points -->
+                    <text x="10" y="280" class="hud-text-small">SEC.CLEARANCE: VERIFIED</text>
+                    <text x="10" y="295" class="hud-text-small">SYSTEMS: ONLINE</text>
+                    <text x="240" y="20" class="hud-text-small text-right">ID: RV-2025</text>
+                    
+                    <!-- Scan line animation -->
+                    <line x1="25" y1="50" x2="275" y2="50" class="scan-line" />
+                </svg>
+                
+                <!-- Security scan overlay -->
+                <div class="security-scan-overlay"></div>
+            </div>
+        </div>
+        
+        <!-- Security level indicator -->
+        <div class="security-level">
+            <span>SECURITY LEVEL:</span>
+            <div class="security-indicator"></div>
+        </div>
+    </section>
+
+<!-- About Section - Personnel File -->
+<section class="about-section" id="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="file-header">
+            <div class="file-label">// ACCESS LEVEL: AUTHORIZED</div>
+            <div class="file-id">OPERATIVE ID: RV-2025</div>
+        </div>
+        
+        <div class="personnel-data full-width">
+            <div class="data-section">
+                <h3 class="data-heading">PROFILE</h3>
+                <p>Hi, I go by @iamaangx028 on the internet (aka Rokkam Vamshi). Cybersecurity Researcher with expertise in offensive security focusing on vulnerability discovery and exploitation. Currently in my final year of B.Tech in Computer Science and Cybersecurity, I specialize in web application security, API testing, and custom reconnaissance tool development.</p>
+            </div>
+            
+            <div class="data-section">
+                <h3 class="data-heading">PROFESSIONAL HISTORY</h3>
+                <div class="history-item">
+                    <div class="history-period">OCT 2024 - PRESENT</div>
+                    <div class="history-details">
+                        <h4>Security Research Intern – FireCompass</h4>
+                        <p>At FireCompass, I contribute to continuous attack surface discovery and CVE research, focusing on real-world exploitation paths. My work involves analyzing vulnerabilities, building automation scripts, and simulating adversarial behaviors to support proactive red teaming. I help strengthen defenses by mapping and monitoring exposed assets across enterprise environments.</p>
+                    </div>
+                </div>
+                <div class="history-item">
+                    <div class="history-period">FEB 2024 - SEP 2024</div>
+                    <div class="history-details">
+                        <h4>InfoSec Intern - CybersmithSECURE</h4>
+                        <p> At CybersmithSECURE, I have worked on numerous projects, utilizing my
+                            expertise in penetration testing and vulnerability assessment.
+                            Conducted more than 30+ Web, Network, and API Pentest in a limited time frame with custom
+                            code alongside my team. During my testing, I have discovered over 50+ Critical and high-severity vulnerabilities, including
+                            SQL injections, IDORs, ATOs, unauthorized admin panel access, PII leaks, information disclosure,
+                            business logic vulnerabilities, and cross-site scripting...etc
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="data-section">
+                        <h3 class="data-heading">EDUCATION</h3>
+                        <div class="education-item">
+                            <div class="education-period">2021 - 2025</div>
+                            <div class="education-details">
+                                <h4>B.Tech in Computer Science and Cybersecurity</h4>
+                                <p>Sree Vidyanikethan Engineering College - Notable coursework in Computer Science & Cybersecurity</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+        
+        <div class="clearance-data">
+            <div class="clearance-label">PRIMARY EXPERTISE:</div>
+            <div class="expertise-tags">
+                <span class="expertise-tag">WebApp Security</span>
+                <span class="expertise-tag">API Testing</span>
+                <span class="expertise-tag">Network Pentesting</span>
+                <span class="expertise-tag">Android Pentesting</span>
+                <span class="expertise-tag">Cloud Pentesting</span>
+                <span class="expertise-tag">CTF Competitions</span>
+                <span class="expertise-tag">Python Scripting </span>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Resume Section - Personnel File -->
+<section class="resume-section" id="resume">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">RESUME</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <!-- Terminal introduction -->
+        <!-- <div class="resume-terminal">
+            <div class="terminal-header">
+                <span class="terminal-title">SYSTEM: ACCESSING PERSONNEL FILE</span>
+                <span class="terminal-status">STATUS: <span class="status-active blink">ACTIVE</span></span>
+            </div>
+            
+            <div class="terminal-body">
+                <div class="terminal-line">$ RETRIEVING SECURE CREDENTIALS...</div>
+                <div class="terminal-line">$ ACCESS LEVEL: AUTHORIZED</div>
+                <div class="terminal-line">$ LOADING OPERATIVE PROFILE...</div>
+            </div>
+        </div> -->
+        
+        <div class="resume-container">
+            <div class="resume-actions">
+                <div class="action-text">
+                    <h3>DOWNLOAD RESUME</h3>
+                    <p>Access my Resume here</p>
+                </div>
+                
+                <div class="document-details">
+                    <div class="detail-item">
+                        <span class="detail-icon pdf-icon"></span>
+                        <div class="detail-info">
+                            <span class="detail-name">PDF Document</span>
+                            <span class="detail-meta">542KB • Optimized for Viewing</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-item">
+                        <span class="detail-icon docx-icon"></span>
+                        <div class="detail-info">
+                            <span class="detail-name">DOCX Document</span>
+                            <span class="detail-meta">318KB • Editable Format</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-options">
+                    <a href="assets/documents/rokkam-vamshi-resume.pdf" class="download-btn pdf" download>
+                        <span class="btn-icon"></span>
+                        <span class="btn-text">SECURE PDF DOWNLOAD</span>
+                    </a>
+                    <a href="assets/documents/rokkam-vamshi-resume.docx" class="download-btn docx" download>
+                        <span class="btn-icon"></span>
+                        <span class="btn-text">SECURE DOCX DOWNLOAD</span>
+                    </a>
+                </div>
+                
+                <div class="resume-footer">
+                    <div class="last-updated">
+                        <span class="update-icon"></span>
+                        <span class="update-text">LAST UPDATED: MAY 2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Security Scanner Effect -->
+        <div class="resume-scanner">
+            <div class="scanner-beam"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section - Field Operations -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PROJECTS</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                            <div class="project-card">
+                                <div class="card-header">
+                                    <div class="project-title">
+                                        <span class="status-indicator"></span>
+                                        <h3>ASM Tool</h3>
+                                    </div>
+                                    <div class="project-status">COMPLETED</div>
+                                </div>
+                                
+                                <div class="project-thumbnail">
+                                    <div class="project-image">
+                                        <!-- Add actual project image here -->
+                                        <img src="images/ASM.png" alt="ASM Tool Screenshot" loading="lazy">
+                                    </div>
+                                    <div class="scan-line-element"></div>
+                                    <div class="hud-overlay">
+                                        <div class="hud-top-left">ASM TOOL v1.0</div>
+                                        <div class="hud-bottom-right">CLASSIFICATION: PUBLIC</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="project-details">
+                                    <p class="project-description">
+                                        Domain-based recon engine with subdomain enumeration, deduplication, Nuclei scanning, and results in user friendly dashboard.
+                                    </p>
+                                    
+                                    <div class="technical-specs">
+                                        <div class="specs-title">TECHNICAL SPECIFICATIONS:</div>
+                                        <div class="tech-stack">
+                                            Python | Nuclei | Subfinder  | Django
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="project-actions">
+                                        <a href="https://github.com/iamaangx028/attack-surface-management" target="_blank" class="project-btn code">VIEW CODE</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="corner-accent"></div>
+                            </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <div class="project-title">
+                            <span class="status-indicator"></span>
+                            <h3>JSRadar</h3>
+                        </div>
+                        <div class="project-status">ONGOING</div>
+                    </div>
+                    
+                    <div class="project-thumbnail">
+                        <div class="project-image">
+                            <img src="images/social-preview.svg" alt="ASM Tool Screenshot" loading="lazy">
+                        </div>
+                        <div class="scan-line-element"></div>
+                        <div class="hud-overlay">
+                            <div class="hud-top-left">JSRADAR v1.2</div>
+                            <div class="hud-bottom-right">CLASSIFICATION: PRIVATE REPO</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <p class="project-description">
+                            A powerful JavaScript enumeration and analysis tool for security researchers and penetration testers. Will make it Public once I complete working on it!
+                        </p>
+                        
+                        <div class="technical-specs">
+                            <div class="specs-title">TECHNICAL SPECIFICATIONS:</div>
+                            <div class="tech-stack">
+                                Python | HTML  
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://github.com/iamaangx028/JSRadar" target="_blank" class="project-btn code">VIEW CODE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="corner-accent"></div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <div class="project-title">
+                            <span class="status-indicator"></span>
+                            <h3>Personal Password Vault</h3>
+                        </div>
+                        <div class="project-status">COMPLETED</div>
+                    </div>
+                    
+                    <div class="project-thumbnail">
+                        <div class="project-image">
+                            <img src="images/passwd-manager.png" alt="ASM Tool Screenshot" loading="lazy">
+                        </div>
+                        <div class="scan-line-element"></div>
+                        <div class="hud-overlay">
+                            <div class="hud-top-left">VAULT v1.2</div>
+                            <div class="hud-bottom-right">CLASSIFICATION: PUBLIC</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <p class="project-description">
+                            Lightweight terminal-based password manager with encryption for personal use.
+                        </p>
+                        
+                        <div class="technical-specs">
+                            <div class="specs-title">TECHNICAL SPECIFICATIONS:</div>
+                            <div class="tech-stack">
+                                Python
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://github.com/iamaangx028/Personal-Password-Manager" target="_blank" class="project-btn code">VIEW CODE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="corner-accent"></div>
+                </div>
+                
+                <!-- Project 4 -->
+                <!-- <div class="project-card">
+                    <div class="card-header">
+                        <div class="project-title">
+                            <span class="status-indicator"></span>
+                            <h3></h3>
+                        </div>
+                        <div class="project-status">COMPLETED</div>
+                    </div>
+                    
+                    <div class="project-thumbnail">
+                        <div class="project-image"></div>
+                        <div class="scan-line-element">
+                            <img src="images/asfasf.jpg" alt="ASM Tool Screenshot"> 
+                        </div>
+                        <div class="hud-overlay">
+                            <div class="hud-top-left"></div>
+                            <div class="hud-bottom-right">CLASSIFICATION: UTILITY</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <p class="project-description">
+                            Python script that helps differentiate HTTP proxy history with different colors in Burp Suite.
+                        </p>
+                        
+                        <div class="technical-specs">
+                            <div class="specs-title">TECHNICAL SPECIFICATIONS:</div>
+                            <div class="tech-stack">
+                                Python | Burp Extensions API | JSON Configuration
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://github.com/iamaangx028/JSRadar" target="_blank" class="project-btn view">VIEW PROJECT</a>
+                            <a href="https://github.com/iamaangx028/JSRadar" target="_blank" class="project-btn code">VIEW CODE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="corner-accent"></div>
+                </div> -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <div class="project-title">
+                            <span class="status-indicator"></span>
+                            <h3>Burp Traffic Highlighter</h3>
+                        </div>
+                        <div class="project-status">COMPLETED</div>
+                    </div>
+                    
+                    <div class="project-thumbnail">
+                        <div class="project-image">
+                            <img src="images/burp-plugin.png" alt="ASM Tool Screenshot" loading="lazy">
+                        </div>
+                        <div class="scan-line-element"></div>
+                        <div class="hud-overlay">
+                            <div class="hud-top-left">HIGHLIGHTER v1.0</div>
+                            <div class="hud-bottom-right">CLASSIFICATION: PUBLIC</div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details">
+                        <p class="project-description">
+                            A Burpsuite extension that is used to automatically highlight Burp HTTP history with different colors.
+                        </p>
+                        
+                        <div class="technical-specs">
+                            <div class="specs-title">TECHNICAL SPECIFICATIONS:</div>
+                            <div class="tech-stack">
+                                Python | Mod Header Extension
+                            </div>
+                        </div>
+                        
+                        <div class="project-actions">
+                            <a href="https://github.com/iamaangx028/burp-traffic-auto-highligter" target="_blank" class="project-btn code">VIEW CODE</a>
+                        </div>
+                    </div>
+                    
+                    <div class="corner-accent"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Skills Section - Arsenal -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">SKILLS</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <!-- Penetration Testing Skills -->
+            <div class="skill-category">
+                <h3 class="category-title">
+                    <span class="category-marker"></span>
+                    PENETRATION TESTING
+                </h3>
+                
+                <div class="skill-grid">
+                    <!-- Skill 1 -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">Web Application Testing</span>
+                            <span class="skill-level">PROFICIENT</span>
+                        </div>
+                        
+                        <div class="skill-progress-container">
+                            <div class="skill-progress" data-level="85"></div>
+                        </div>
+                        
+                        <div class="skill-details">85%</div>
+                    </div>
+                    
+                    <!-- Skill 2 -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">API Security Testing</span>
+                            <span class="skill-level">ADVANCED</span>
+                        </div>
+                        
+                        <div class="skill-progress-container">
+                            <div class="skill-progress" data-level="90"></div>
+                        </div>
+                        
+                        <div class="skill-details">90%</div>
+                    </div>
+                    
+                    <!-- Skill 3 -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">Network Penetration</span>
+                            <span class="skill-level">INTERMEDIATE</span>
+                        </div>
+                        
+                        <div class="skill-progress-container">
+                            <div class="skill-progress" data-level="75"></div>
+                        </div>
+                        
+                        <div class="skill-details">75%</div>
+                    </div>
+                    
+                    <!-- Skill 4 -->
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">Android Pentesting</span>
+                            <span class="skill-level">INTERMEDIATE</span>
+                        </div>
+                        
+                        <div class="skill-progress-container">
+                            <div class="skill-progress" data-level="70"></div>
+                        </div>
+                        
+                        <div class="skill-details">70%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools Mastery -->
+            <div class="skill-category">
+                <h3 class="category-title">
+                    <span class="category-marker"></span>
+                    TOOLS MASTERY
+                </h3>
+                
+                <div class="tools-grid">
+                    <!-- Tool 1 -->
+                    <div class="tool-card">
+                        <div class="tool-meter-container">
+                            <svg class="tool-meter" viewBox="0 0 100 100">
+                                <circle class="meter-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="meter-progress" cx="50" cy="50" r="45" data-level="90"></circle>
+                                <text class="meter-text" x="50" y="55" text-anchor="middle">90%</text>
+                            </svg>
+                        </div>
+                        <div class="tool-name">Burp Suite</div>
+                    </div>
+                    
+                    <!-- Tool 2 -->
+                    <div class="tool-card">
+                        <div class="tool-meter-container">
+                            <svg class="tool-meter" viewBox="0 0 100 100">
+                                <circle class="meter-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="meter-progress" cx="50" cy="50" r="45" data-level="85"></circle>
+                                <text class="meter-text" x="50" y="55" text-anchor="middle">85%</text>
+                            </svg>
+                        </div>
+                        <div class="tool-name">Nmap</div>
+                    </div>
+                    
+                    <!-- Tool 3 -->
+                    <div class="tool-card">
+                        <div class="tool-meter-container">
+                            <svg class="tool-meter" viewBox="0 0 100 100">
+                                <circle class="meter-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="meter-progress" cx="50" cy="50" r="45" data-level="80"></circle>
+                                <text class="meter-text" x="50" y="55" text-anchor="middle">80%</text>
+                            </svg>
+                        </div>
+                        <div class="tool-name">Metasploit</div>
+                    </div>
+                    
+                    <!-- Tool 4 -->
+                    <div class="tool-card">
+                        <div class="tool-meter-container">
+                            <svg class="tool-meter" viewBox="0 0 100 100">
+                                <circle class="meter-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="meter-progress" cx="50" cy="50" r="45" data-level="85"></circle>
+                                <text class="meter-text" x="50" y="55" text-anchor="middle">85%</text>
+                            </svg>
+                        </div>
+                        <div class="tool-name">Wireshark</div>
+                    </div>
+                    
+                    <!-- Tool 5 -->
+                    <div class="tool-card">
+                        <div class="tool-meter-container">
+                            <svg class="tool-meter" viewBox="0 0 100 100">
+                                <circle class="meter-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="meter-progress" cx="50" cy="50" r="45" data-level="88"></circle>
+                                <text class="meter-text" x="50" y="55" text-anchor="middle">88%</text>
+                            </svg>
+                        </div>
+                        <div class="tool-name">Nuclei</div>
+                    </div>
+                    
+                    <!-- Tool 6 -->
+                    <div class="tool-card">
+                        <div class="tool-meter-container">
+                            <svg class="tool-meter" viewBox="0 0 100 100">
+                                <circle class="meter-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="meter-progress" cx="50" cy="50" r="45" data-level="82"></circle>
+                                <text class="meter-text" x="50" y="55" text-anchor="middle">82%</text>
+                            </svg>
+                        </div>
+                        <div class="tool-name">SQLMap</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Programming Skills -->
+            <!-- <div class="skill-category">
+                <h3 class="category-title">
+                    <span class="category-marker"></span>
+                    PROGRAMMING
+                </h3>
+                
+                <div class="code-skills">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="window-title">skills.py</span>
+                            <div class="window-controls">
+                                <span class="control"></span>
+                                <span class="control"></span>
+                                <span class="control"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="code-content">
+                            <pre><code class="language-python">
+                            class Skillset:
+                                def __init__(self):
+                                    self.languages = {
+                                        "Python": 0.85,  # Automation Researcher
+                                        "Bash": 0.80,    # Scripting expert
+                                        "C": 0.75,       # Low-level programming
+                                        "JavaScript": 0.65,  # Web security
+                                    }
+                                    
+                                    self.frameworks = {
+                                        "Flask": 0.70,
+                                        "Django": 0.65,
+                                    }
+                                    
+                                def automation_capabilities(self):
+                                    return [
+                                        "Custom scanning tools",
+                                        "Vulnerability automation",
+                                        "Report generation",
+                                        "Data processing pipelines"
+                                    ]
+                                    
+                            # Status: OPERATIONAL
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Credentials Section - Security Clearance -->
+
+<!-- SECURITY CLEARANCE SECTION -->
+<section class="credentials-section" id="credentials">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">CREDENTIALS</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="security-mesh"></div>
+        
+        <!-- Credentials Dashboard -->
+        <div class="credentials-dashboard">
+            <!-- Certifications Panel -->
+            <div class="dashboard-panel cert-panel">
+                <div class="panel-header">
+                    <div class="panel-icon"></div>
+                    <h3 class="panel-title">ACTIVE CERTIFICATIONS</h3>
+                    <div class="panel-controls">
+                        <span class="panel-dot"></span>
+                        <span class="panel-dot"></span>
+                        <span class="panel-dot"></span>
+                    </div>
+                </div>
+                
+                <div class="panel-content">
+                    <!-- Cert Card 1 -->
+                    <div class="cert-card">
+                        <div class="card-security-scanner">
+                            <div class="scan-line"></div>
+                        </div>
+                        
+                        <div class="card-header">
+                            <div class="cert-badge">
+                                <svg class="cert-badge-icon" viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" class="badge-outer"></circle>
+                                    <circle cx="25" cy="25" r="15" class="badge-inner"></circle>
+                                    <text x="25" y="30" text-anchor="middle" class="badge-text">eJPT</text>
+                                </svg>
+                            </div>
+                            <div class="cert-header-details">
+                                <div class="cert-id">ID: RV-CERT-001</div>
+                                <div class="cert-level">CLEARANCE: LEVEL 3</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-body">
+                            <h4 class="cert-name">eJPTv2 - Junior Penetration Tester</h4>
+                            <div class="cert-meta">
+                                <span class="cert-issuer">eLearnSecurity</span>
+                                <span class="cert-date">ISSUED: OCT.2023</span>
+                                <span class="cert-status">STATUS: ACTIVE</span>
+                            </div>
+                            <p class="cert-description">
+                                Practical certification demonstrating hands-on penetration testing skills and methodology. Covers network attacks, web application testing, and system exploitation.
+                            </p>
+                        </div>
+                        
+                        <div class="cert-footer">
+                            <div class="cert-verification">
+                                <span class="verify-label">VERIFICATION:</span>
+                                <span class="verify-id">83940256</span>
+                            </div>
+                            <div class="button-container">
+                                <a href="https://certs.ine.com/75085565-4f07-4349-94e5-cf1a83b9dacb#gs.6clr63" target="_blank" class="cert-details-link">
+                                    <span>VIEW DETAILS</span>
+                                    <span class="btn-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Corner accent -->
+                        <div class="cert-corner-accent"></div>
+                    </div>
+                    
+                    <!-- Cert Card 2 -->
+                    <div class="cert-card">
+                        <div class="card-security-scanner">
+                            <div class="scan-line"></div>
+                        </div>
+                        
+                        <div class="card-header">
+                            <div class="cert-badge">
+                                <svg class="cert-badge-icon" viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" class="badge-outer"></circle>
+                                    <circle cx="25" cy="25" r="15" class="badge-inner"></circle>
+                                    <text x="25" y="30" text-anchor="middle" class="badge-text">API</text>
+                                </svg>
+                            </div>
+                            <div class="cert-header-details">
+                                <div class="cert-id">ID: RV-CERT-002</div>
+                                <div class="cert-level">CLEARANCE: LEVEL 2</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-body">
+                            <h4 class="cert-name">API Security Fundamentals</h4>
+                            <div class="cert-meta">
+                                <span class="cert-issuer">APIsec University</span>
+                                <span class="cert-date">ISSUED: DEC.2023</span>
+                                <span class="cert-status">STATUS: ACTIVE</span>
+                            </div>
+                            <p class="cert-description">
+                                Specialized training in API security testing, vulnerability assessment, and remediation strategies. Focuses on OWASP API Top 10 security risks.
+                            </p>
+                        </div>
+                        
+                        <div class="cert-footer">
+                            <div class="cert-verification">
+                                <span class="verify-label">VERIFICATION:</span>
+                                <span class="verify-id">6bba0764-a1b7</span>
+                            </div>
+                            <div class="button-container">
+                                <a href="https://www.credly.com/badges/4594fdcc-be77-4ce2-989b-3e9625877b48" target="_blank" class="cert-details-link">
+                                    <span>VIEW DETAILS</span>
+                                    <span class="btn-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Corner accent -->
+                        <div class="cert-corner-accent"></div>
+                    </div>
+                    
+                    <!-- Cert Card 3 -->
+                    <div class="cert-card">
+                        <div class="card-security-scanner">
+                            <div class="scan-line"></div>
+                        </div>
+                        
+                        <div class="card-header">
+                            <div class="cert-badge">
+                                <svg class="cert-badge-icon" viewBox="0 0 50 50">
+                                    <circle cx="25" cy="25" r="20" class="badge-outer"></circle>
+                                    <circle cx="25" cy="25" r="15" class="badge-inner"></circle>
+                                    <text x="25" y="30" text-anchor="middle" class="badge-text">API</text>
+                                </svg>
+                            </div>
+                            <div class="cert-header-details">
+                                <div class="cert-id">ID: RV-CERT-003</div>
+                                <div class="cert-level">CLEARANCE: LEVEL 2</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cert-body">
+                            <h4 class="cert-name">PT1</h4>
+                            <div class="cert-meta">
+                                <span class="cert-issuer">TryHackMe</span>
+                                <span class="cert-date">ISSUED: Aug.2025</span>
+                                <span class="cert-status">STATUS: ACTIVE</span>
+                            </div>
+                            <p class="cert-description">
+                                Specialized training in API security testing, vulnerability assessment, and remediation strategies. Focuses on OWASP API Top 10 security risks.
+                            </p>
+                        </div>
+                        
+                        <div class="cert-footer">
+                            <div class="cert-verification">
+                                <span class="verify-label">VERIFICATION:</span>
+                                <span class="verify-id">6bba0764-a1b7</span>
+                            </div>
+                            <div class="button-container">
+                                <a href="https://www.credly.com/badges/4594fdcc-be77-4ce2-989b-3e9625877b48" target="_blank" class="cert-details-link">
+                                    <span>VIEW DETAILS</span>
+                                    <span class="btn-icon">→</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Corner accent -->
+                        <div class="cert-corner-accent"></div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Security Scanner Effect -->
+        <div class="credentials-scanner">
+            <div class="scanner-beam"></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Letters of Appreciation Section -->
+<!-- Combined Trophy & Acknowledgements Section -->
+<section class="recognition-section" id="recognition">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">SECURITY HALL OF FAME</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <!-- Command terminal introduction -->
+        <!-- <div class="recognition-terminal">
+            <div class="terminal-header">
+                <span class="terminal-title">SYSTEM: SECURITY ACHIEVEMENT DATABASE</span>
+                <span class="terminal-status">STATUS: <span class="status-active blink">ACTIVE</span></span>
+            </div>
+            
+            <div class="terminal-body">
+                <div class="terminal-line">$ INITIALIZING SECURE CONNECTION...</div>
+                <div class="terminal-line">$ ACCESS GRANTED TO CLASSIFIED RECORDS</div>
+                <div class="terminal-line">$ DISPLAYING VULNERABILITY REPORTS AND ACKNOWLEDGEMENTS...</div>
+            </div>
+        </div> -->
+        <div class="showcase-header">
+            <div class="header-line"></div>
+            <h3 class="showcase-title">STATS</h3>
+            <div class="header-line"></div>
+        </div>
+
+        <!-- Stats counter -->
+        <div class="stats-counter">
+            <!-- Companies -->
+            <div class="stat-item">
+                <div class="stat-value">80<span class="plus">+</span></div>
+                <div class="stat-label">ORGANIZATIONS</div>
+                <div class="stat-badge">VERIFIED</div>
+            </div>
+            
+            <!-- Vulnerabilities -->
+            <div class="stat-item">
+                <div class="stat-value">50<span class="plus">+</span></div>
+                <div class="stat-label">CRITICAL/HIGH VULNERABILITIES</div>
+            </div>
+            
+            <!-- Acknowledgements -->
+            <div class="stat-item">
+                <div class="stat-value">25<span class="plus">+</span></div>
+                <div class="stat-label">VAPTs (During Internship)</div>
+            </div>
+            
+            <!-- Competition -->
+            <div class="stat-item">
+                <div class="stat-value">TOP 100</div>
+                <div class="stat-label">NCIIPC-AICTE PENTATHON</div>
+            </div>
+        </div>
+
+        <!-- Companies Marquee (NEW ADDITION) -->
+        <div class="companies-showcase">
+            <div class="showcase-header">
+                <div class="header-line"></div>
+                <h3 class="showcase-title">ORGANIZATIONS SECURED</h3>
+                <div class="header-line"></div>
+            </div>
+            
+            <div class="companies-marquee-container">
+                <div class="companies-marquee">
+                    <div class="marquee-content">
+                        <!-- Companies will be duplicated in JS for infinite scroll effect -->
+                        <div class="company-item"><span class="company-icon"></span> ACCENTURE</div>
+                        <div class="company-item"><span class="company-icon"></span> CISCO</div>
+                        <div class="company-item"><span class="company-icon"></span> SONY</div>
+                        <div class="company-item"><span class="company-icon"></span> PANASONIC</div>
+                        <div class="company-item"><span class="company-icon"></span> XTRM</div>
+                        <div class="company-item"><span class="company-icon"></span> U.K. MINISTRY OF DEFENSE</div>
+                        <div class="company-item"><span class="company-icon"></span> U.S. DEPARTMENT OF EDUCATION</div>
+                        <div class="company-item"><span class="company-icon"></span> UNI-MARBURG</div>
+                        <div class="company-item"><span class="company-icon"></span> JIO</div>
+                        <div class="company-item"><span class="company-icon"></span> PATYM</div>
+                        <div class="company-item"><span class="company-icon"></span> TATAPLAY</div>
+                        <div class="company-item"><span class="company-icon"></span> GEA</div>
+                        <div class="company-item"><span class="company-icon"></span> DUTCH RESEARCH COUNCIL</div>
+                        <div class="company-item"><span class="company-icon"></span> GEEKSFORGEEKS</div>
+                        <div class="company-item"><span class="company-icon"></span> SONY</div>
+                        <div class="company-item"><span class="company-icon"></span> ACHMEA</div>
+                        <div class="company-item"><span class="company-icon"></span> DECKO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Interactive Display Tabs -->
+        <div class="showcase-header">
+            <div class="header-line"></div>
+            <h3 class="showcase-title">LETTERS OF APPRECIATION</h3>
+            <div class="header-line"></div>
+        </div>
+        
+        <!-- Trophy Cases Display -->
+        
+        <!-- Acknowledgements Display (LOA GALLERY) -->
+        <div class="display-section" id="acknowledgements-display">
+            <!-- LOA Interactive Display -->
+            <div class="loa-showcase">
+                <!-- LOA Viewer Container -->
+                <div class="loa-viewer">
+                    <div class="viewer-display">
+                        <!-- Letter 1: Axway -->
+                        <div class="letter-display active" id="letter-1">
+                            <div class="letter-container">
+                                <!-- PDF/Image viewer with zoom controls -->
+                                <div class="letter-image-container">
+                                    <img src="images/Appreciation Letter - Rokkam Vamshi-axway_page-0001edited.jpg" alt="Letter of Appreciation from Axway" class="letter-image" loading="lazy">
+                                    <div class="letter-controls">
+                                        <button class="zoom-in-btn" aria-label="Zoom In">+</button>
+                                        <button class="zoom-out-btn" aria-label="Zoom Out">-</button>
+                                        <button class="reset-zoom-btn" aria-label="Reset Zoom">⟲</button>
+                                    </div>
+                                </div>
+                                <!-- Side info panel -->
+                                <div class="letter-info">
+                                    <div class="recognition-header">
+                                        <div class="company-badge">
+                                            <span class="company-initial">A</span>
+                                        </div>
+                                        <div class="company-details">
+                                            <h4 class="company-name">Axway</h4>
+                                            <div class="recognition-meta">
+                                                <span class="recognition-date">ISSUED: JUL.2023</span>
+                                                <span class="recognition-type">JENKINS SERVER</span>
+                                            </div>
+                                        </div>
+                                        <div class="recognition-security">
+                                            <div class="security-indicator"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recognition-content">
+                                        <div class="recognition-quote">
+                                            <span class="quote-mark">❝</span>
+                                            <p class="quote-text">Thank you for responsibly disclosing the information leakage finding on one of our Jenkins servers. We appreciate the professional manner in which the issue was reported.</p>
+                                            <span class="quote-mark end">❞</span>
+                                        </div>
+                                        
+                                        <div class="recognition-signature">
+                                            <span class="signature-text">Sandy Blackwell</span>
+                                            <span class="signature-role">Global Director Software Security</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Letter 2: US Department of Education -->
+                        <div class="letter-display" id="letter-2">
+                            <div class="letter-container">
+                                <div class="letter-image-container">
+                                    <img src="images/Letter-of-appreciation-ed-gov_page-0001.jpg" alt="Letter of Appreciation from US Department of Education" class="letter-image" loading="lazy">
+                                    <div class="letter-controls">
+                                        <button class="zoom-in-btn" aria-label="Zoom In">+</button>
+                                        <button class="zoom-out-btn" aria-label="Zoom Out">-</button>
+                                        <button class="reset-zoom-btn" aria-label="Reset Zoom">⟲</button>
+                                    </div>
+                                </div>
+                                <div class="letter-info">
+                                    <div class="recognition-header">
+                                        <div class="company-badge">
+                                            <span class="company-initial">U</span>
+                                        </div>
+                                        <div class="company-details">
+                                            <h4 class="company-name">US Department of Education</h4>
+                                            <div class="recognition-meta">
+                                                <span class="recognition-date">ISSUED: MAR.2023</span>
+                                                <span class="recognition-type">WEB PORTAL</span>
+                                            </div>
+                                        </div>
+                                        <div class="recognition-security">
+                                            <div class="security-indicator high"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recognition-content">
+                                        <div class="recognition-quote">
+                                            <span class="quote-mark">❝</span>
+                                            <p class="quote-text">We extend our gratitude for your responsible disclosure of critical security vulnerabilities in our web portal. Your expertise helped protect sensitive educational data.</p>
+                                            <span class="quote-mark end">❞</span>
+                                        </div>
+                                        
+                                        <div class="recognition-signature">
+                                            <span class="signature-text">Security Response Team</span>
+                                            <span class="signature-role">US Department of Education</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Letter 3: Uni-Marburg -->
+                        <div class="letter-display" id="letter-3">
+                            <div class="letter-container">
+                                <div class="letter-image-container">
+                                    <img src="images/Letter_Of_Appreciation_Rokkam_Vamshi_marburg_page-0001.jpg" alt="Letter of Appreciation from Philipps-Universität Marburg" class="letter-image" loading="lazy">
+                                    <div class="letter-controls">
+                                        <button class="zoom-in-btn" aria-label="Zoom In">+</button>
+                                        <button class="zoom-out-btn" aria-label="Zoom Out">-</button>
+                                        <button class="reset-zoom-btn" aria-label="Reset Zoom">⟲</button>
+                                    </div>
+                                </div>
+                                <div class="letter-info">
+                                    <div class="recognition-header">
+                                        <div class="company-badge">
+                                            <span class="company-initial">U</span>
+                                        </div>
+                                        <div class="company-details">
+                                            <h4 class="company-name">Uni-Marburg</h4>
+                                            <div class="recognition-meta">
+                                                <span class="recognition-date">ISSUED: SEP.2023</span>
+                                                <span class="recognition-type">AUTH BYPASS</span>
+                                            </div>
+                                        </div>
+                                        <div class="recognition-security">
+                                            <div class="security-indicator critical"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recognition-content">
+                                        <div class="recognition-quote">
+                                            <span class="quote-mark">❝</span>
+                                            <p class="quote-text">Thank you for identifying and reporting the authentication bypass vulnerability in our research portal. Your contribution has significantly improved our security posture.</p>
+                                            <span class="quote-mark end">❞</span>
+                                        </div>
+                                        
+                                        <div class="recognition-signature">
+                                            <span class="signature-text">IT Security Department</span>
+                                            <span class="signature-role">Philipps-Universität Marburg</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Letter 4: Panasonic -->
+                        <div class="letter-display" id="letter-4">
+                            <div class="letter-container">
+                                <div class="letter-image-container">
+                                    <img src="images/Panasonic-appreciation_Rokkam Vamshi_page-0001.jpg" alt="Letter of Appreciation from Panasonic" class="letter-image" loading="lazy">
+                                    <div class="letter-controls">
+                                        <button class="zoom-in-btn" aria-label="Zoom In">+</button>
+                                        <button class="zoom-out-btn" aria-label="Zoom Out">-</button>
+                                        <button class="reset-zoom-btn" aria-label="Reset Zoom">⟲</button>
+                                    </div>
+                                </div>
+                                <div class="letter-info">
+                                    <div class="recognition-header">
+                                        <div class="company-badge">
+                                            <span class="company-initial">P</span>
+                                        </div>
+                                        <div class="company-details">
+                                            <h4 class="company-name">Panasonic</h4>
+                                            <div class="recognition-meta">
+                                                <span class="recognition-date">ISSUED: JAN.2024</span>
+                                                <span class="recognition-type">SSRF VULN</span>
+                                            </div>
+                                        </div>
+                                        <div class="recognition-security">
+                                            <div class="security-indicator high"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recognition-content">
+                                        <div class="recognition-quote">
+                                            <span class="quote-mark">❝</span>
+                                            <p class="quote-text">We appreciate your responsible disclosure of the SSRF vulnerability in our internal API. Your detailed report allowed us to quickly remediate the issue.</p>
+                                            <span class="quote-mark end">❞</span>
+                                        </div>
+                                        
+                                        <div class="recognition-signature">
+                                            <span class="signature-text">Security Operations Center</span>
+                                            <span class="signature-role">Panasonic Corporation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Letter 5: US DoD -->
+                        <div class="letter-display" id="letter-5">
+                            <div class="letter-container">
+                                <div class="letter-image-container">
+                                    <img src="images/GFG _Vulnerability_Rokkam Vamshi_page-0001.jpg" alt="Letter of Appreciation from US Department of Defense" class="letter-image" loading="lazy">
+                                    <div class="letter-controls">
+                                        <button class="zoom-in-btn" aria-label="Zoom In">+</button>
+                                        <button class="zoom-out-btn" aria-label="Zoom Out">-</button>
+                                        <button class="reset-zoom-btn" aria-label="Reset Zoom">⟲</button>
+                                    </div>
+                                </div>
+                                <div class="letter-info">
+                                    <div class="recognition-header">
+                                        <div class="company-badge">
+                                            <span class="company-initial">D</span>
+                                        </div>
+                                        <div class="company-details">
+                                            <h4 class="company-name">US Department of Defense</h4>
+                                            <div class="recognition-meta">
+                                                <span class="recognition-date">ISSUED: OCT.2023</span>
+                                                <span class="recognition-type">AUTH BYPASS</span>
+                                            </div>
+                                        </div>
+                                        <div class="recognition-security">
+                                            <div class="security-indicator critical"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recognition-content">
+                                        <div class="recognition-quote">
+                                            <span class="quote-mark">❝</span>
+                                            <p class="quote-text">Thank you for your diligent effort in identifying and responsibly reporting the authentication bypass vulnerability in our web portal. Your contribution has helped safeguard critical defense infrastructure.</p>
+                                            <span class="quote-mark end">❞</span>
+                                        </div>
+                                        
+                                        <div class="recognition-signature">
+                                            <span class="signature-text">Vulnerability Disclosure Program</span>
+                                            <span class="signature-role">US Department of Defense</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Letter 6: Cisco -->
+                        <div class="letter-display" id="letter-6">
+                            <div class="letter-container">
+                                <div class="letter-image-container">
+                                    <img src="images/letter-of-appreciation-stuttgart_page-0001.jpg" alt="Letter of Appreciation from Cisco Systems" class="letter-image" loading="lazy">
+                                    <div class="letter-controls">
+                                        <button class="zoom-in-btn" aria-label="Zoom In">+</button>
+                                        <button class="zoom-out-btn" aria-label="Zoom Out">-</button>
+                                        <button class="reset-zoom-btn" aria-label="Reset Zoom">⟲</button>
+                                    </div>
+                                </div>
+                                <div class="letter-info">
+                                    <div class="recognition-header">
+                                        <div class="company-badge">
+                                            <span class="company-initial">C</span>
+                                        </div>
+                                        <div class="company-details">
+                                            <h4 class="company-name">Cisco Systems</h4>
+                                            <div class="recognition-meta">
+                                                <span class="recognition-date">ISSUED: NOV.2023</span>
+                                                <span class="recognition-type">RCE VULNERABILITY</span>
+                                            </div>
+                                        </div>
+                                        <div class="recognition-security">
+                                            <div class="security-indicator critical"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="recognition-content">
+                                        <div class="recognition-quote">
+                                            <span class="quote-mark">❝</span>
+                                            <p class="quote-text">We commend your exceptional skill in identifying the remote code execution vulnerability in our network management software. Your detailed report and responsible disclosure exemplify the highest standards in security research.</p>
+                                            <span class="quote-mark end">❞</span>
+                                        </div>
+                                        
+                                        <div class="recognition-signature">
+                                            <span class="signature-text">Product Security Incident Response Team</span>
+                                            <span class="signature-role">Cisco Systems, Inc.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- LOA Navigation Controls -->
+                    <div class="letter-navigation">
+                        <button class="nav-btn prev-btn" aria-label="Previous Letter">←</button>
+                        <div class="nav-indicators">
+                            <span class="nav-dot active" data-letter="1"></span>
+                            <span class="nav-dot" data-letter="2"></span>
+                            <span class="nav-dot" data-letter="3"></span>
+                            <span class="nav-dot" data-letter="4"></span>
+                            <span class="nav-dot" data-letter="5"></span>
+                            <span class="nav-dot" data-letter="6"></span>
+                        </div>
+                        <button class="nav-btn next-btn" aria-label="Next Letter">→</button>
+                    </div>
+                </div>
+                
+                <!-- Letter thumbnails (preview selector) -->
+                <div class="letter-thumbnails">
+                    <div class="thumbnail active" data-letter="1">
+                        <img src="images/Appreciation Letter - Rokkam Vamshi-axway_page-0001edited.jpg" alt="Axway Letter Thumbnail" loading="lazy">
+                        <div class="thumb-overlay">
+                            <span class="thumb-text">AXWAY</span>
+                        </div>
+                    </div>
+                    <div class="thumbnail" data-letter="2">
+                        <img src="images/Letter-of-appreciation-ed-gov_page-0001.jpg" alt="US Dept of Education Letter Thumbnail" loading="lazy">
+                        <div class="thumb-overlay">
+                            <span class="thumb-text">US DEPT EDU</span>
+                        </div>
+                    </div>
+                    <div class="thumbnail" data-letter="3">
+                        <img src="images/Letter_Of_Appreciation_Rokkam_Vamshi_marburg_page-0001.jpg" alt="Uni-Marburg Letter Thumbnail" loading="lazy">
+                        <div class="thumb-overlay">
+                            <span class="thumb-text">UNI-MARBURG</span>
+                        </div>
+                    </div>
+                    <div class="thumbnail" data-letter="4">
+                        <img src="images/Panasonic-appreciation_Rokkam Vamshi_page-0001.jpg" alt="Panasonic Letter Thumbnail" loading="lazy">
+                        <div class="thumb-overlay">
+                            <span class="thumb-text">PANASONIC</span>
+                        </div>
+                    </div>
+                    <div class="thumbnail" data-letter="5">
+                        <img src="images/GFG _Vulnerability_Rokkam Vamshi_page-0001.jpg" alt="US DoD Letter Thumbnail" loading="lazy">
+                        <div class="thumb-overlay">
+                            <span class="thumb-text">US DOD</span>
+                        </div>
+                    </div>
+                    <div class="thumbnail" data-letter="6">
+                        <img src="images/letter-of-appreciation-stuttgart_page-0001.jpg" alt="Cisco Letter Thumbnail" loading="lazy">
+                        <div class="thumb-overlay">
+                            <span class="thumb-text">CISCO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Additional Acknowledgements info -->
+            <div class="acknowledgements-footer">
+                <div class="records-counter">
+                    <span class="counter-text">SHOWING FEW FORMAL ACKNOWLEDGEMENTS</span>
+                    <div class="counter-progress">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Recognition banner -->
+        <div class="recognition-banner">
+            <div class="banner-bg"></div>
+            <div class="banner-content">
+                <div class="banner-icon">🏆</div>
+                <div class="banner-text">
+                    <h3>HACKERONE & BUGCROWD VERIFIED</h3>
+                    <p>Active profiles with consistent recognition for responsible disclosure and thorough vulnerability reports.</p>
+                </div>
+                <a href="https://hackerone.com/rokkam_vamshi_" class="banner-link" target="_blank">VIEW PROFILE</a>
+            </div>
+        </div>
+        
+        <!-- Security Scanner Effect -->
+        <div class="credentials-scanner">
+            <div class="scanner-beam"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Intelligence Reports Section -->
+<section class="intelligence-section" id="blog">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">BLOGS</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="security-mesh"></div>
+        
+        <!-- Intelligence Terminal -->
+        <!-- <div class="intel-terminal">
+            <div class="terminal-header">
+                <span class="terminal-title">SYSTEM: THREAT INTELLIGENCE DATABASE</span>
+                <span class="terminal-status">STATUS: <span class="status-active blink">LIVE</span></span>
+            </div>
+            
+            <div class="terminal-body">
+                <div class="terminal-line">$ ACCESSING INTELLIGENCE DATABASE...</div>
+                <div class="terminal-line">$ DECRYPTING SECURE REPORTS...</div>
+                <div class="terminal-line">$ THREAT INTELLIGENCE LOADED</div>
+                <div class="terminal-line">$ DISPLAYING LATEST REPORTS...</div>
+            </div>
+        </div> -->
+        
+        <!-- Intel Filter Bar -->
+        <div class="intel-filters">
+            <div class="filter-label">FILTER BY CLASSIFICATION:</div>
+            <div class="filter-options">
+                <button class="filter-btn active" data-filter="all">ALL INTEL</button>
+                <button class="filter-btn" data-filter="vulnerability">VULNERABILITY</button>
+                <button class="filter-btn" data-filter="priority">PRIORITY</button>
+                <button class="filter-btn" data-filter="recon">RECON</button>
+            </div>
+            <div class="search-container">
+                <input type="text" class="intel-search" placeholder="SEARCH INTELLIGENCE DATABASE...">
+                <button class="search-btn">
+                    <svg class="search-icon" viewBox="0 0 24 24">
+                        <circle cx="10" cy="10" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <line x1="15" y1="15" x2="21" y2="21" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Intelligence Reports Container -->
+        <div class="intel-container">
+            <!-- Intel Report 1 -->
+            <div class="intel-card" data-type="vulnerability">
+                <div class="intel-security-scanner">
+                    <div class="scan-line"></div>
+                </div>
+                
+                <div class="intel-header">
+                    <div class="intel-badge vulnerability">
+                        <span class="badge-icon"></span>
+                        <span class="badge-text">VULNERABILITY DISCLOSURE</span>
+                    </div>
+                    <div class="intel-id">ID: RV-INT-24-022</div>
+                </div>
+                
+                <div class="intel-body">
+                    <h3 class="intel-title">Exploiting Django Debug Mode for Unrestricted Access</h3>
+                    
+                    <div class="intel-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon date-icon"></span>
+                            <span class="meta-text">February 12, 2024</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon time-icon"></span>
+                            <span class="meta-text">6 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon severity-icon"></span>
+                            <span class="meta-text">Severity: High</span>
+                        </div>
+                    </div>
+                    
+                    <div class="intel-excerpt">
+                        <p>A detailed writeup on how Django's debug mode can be exploited to gain unrestricted access to internal dashboards and sensitive information.</p>
+                    </div>
+                    
+                    <div class="intel-tags">
+                        <span class="intel-tag">Django</span>
+                        <span class="intel-tag">Web App</span>
+                        <span class="intel-tag">Debug Mode</span>
+                        <span class="intel-tag">Authentication Bypass</span>
+                    </div>
+                </div>
+                
+                <div class="intel-footer">
+                    <a href="https://medium.com/@rokkamvamshi18/exploiting-django-debug-mode-for-unrestricted-access-to-the-internal-dashboard-b725783714ae" target="_blank" class="intel-action-btn">
+                        <span class="btn-text">ACCESS FULL REPORT</span>
+                        <span class="btn-icon"></span>
+                    </a>
+                    <div class="intel-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">DECLASSIFIED</span>
+                    </div>
+                </div>
+                
+                <!-- Corner accent -->
+                <div class="intel-corner-accent"></div>
+            </div>
+            
+            <!-- Intel Report 2 -->
+            <div class="intel-card" data-type="priority">
+                <div class="intel-security-scanner">
+                    <div class="scan-line"></div>
+                </div>
+                
+                <div class="intel-header">
+                    <div class="intel-badge priority">
+                        <span class="badge-icon"></span>
+                        <span class="badge-text">PRIORITY INTEL</span>
+                    </div>
+                    <div class="intel-id">ID: RV-INT-24-031</div>
+                </div>
+                
+                <div class="intel-body">
+                    <h3 class="intel-title">CVE-2025-0108: Exploiting Palo Alto PAN-OS</h3>
+                    
+                    <div class="intel-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon date-icon"></span>
+                            <span class="meta-text">March 5, 2024</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon time-icon"></span>
+                            <span class="meta-text">9 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon severity-icon critical"></span>
+                            <span class="meta-text">Severity: Critical</span>
+                        </div>
+                    </div>
+                    
+                    <div class="intel-excerpt">
+                        <p>Analysis of CVE-2025-0108 affecting Palo Alto PAN-OS, including exploitation vectors, detection methods, and mitigation strategies.</p>
+                    </div>
+                    
+                    <div class="intel-tags">
+                        <span class="intel-tag">CVE</span>
+                        <span class="intel-tag">Palo Alto</span>
+                        <span class="intel-tag">PAN-OS</span>
+                        <span class="intel-tag">Firewall</span>
+                    </div>
+                </div>
+                
+                <div class="intel-footer">
+                    <a href="https://firecompass.com/cve-2025-0108-how-attackers-exploit-palo-alto-pan-os-and-are-you-vulnerable/" target="_blank" class="intel-action-btn">
+                        <span class="btn-text">ACCESS FULL REPORT</span>
+                        <span class="btn-icon"></span>
+                    </a>
+                    <div class="intel-status">
+                        <span class="status-dot priority"></span>
+                        <span class="status-text">PRIORITY</span>
+                    </div>
+                </div>
+                
+                <!-- Corner accent -->
+                <div class="intel-corner-accent priority"></div>
+            </div>
+            
+            <!-- Intel Report 3 -->
+            <div class="intel-card" data-type="recon">
+                <div class="intel-security-scanner">
+                    <div class="scan-line"></div>
+                </div>
+                
+                <div class="intel-header">
+                    <div class="intel-badge recon">
+                        <span class="badge-icon"></span>
+                        <span class="badge-text">RECON TECHNIQUES</span>
+                    </div>
+                    <div class="intel-id">ID: RV-INT-24-009</div>
+                </div>
+                
+                <div class="intel-body">
+                    <h3 class="intel-title">Using Shodan to Find and Exploit Open Jenkins Instances</h3>
+                    
+                    <div class="intel-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon date-icon"></span>
+                            <span class="meta-text">January 18, 2024</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon time-icon"></span>
+                            <span class="meta-text">7 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon severity-icon"></span>
+                            <span class="meta-text">Severity: Medium</span>
+                        </div>
+                    </div>
+                    
+                    <div class="intel-excerpt">
+                        <p>Guide to utilizing Shodan for identifying exposed Jenkins instances and the security implications of these findings.</p>
+                    </div>
+                    
+                    <div class="intel-tags">
+                        <span class="intel-tag">Shodan</span>
+                        <span class="intel-tag">Jenkins</span>
+                        <span class="intel-tag">OSINT</span>
+                        <span class="intel-tag">Reconnaissance</span>
+                    </div>
+                </div>
+                
+                <div class="intel-footer">
+                    <a href="https://rokkamvamshi18.medium.com/using-shodan-to-find-open-jenkins-instances-and-exploit-them-1e7491ca27e3" target="_blank" class="intel-action-btn">
+                        <span class="btn-text">ACCESS FULL REPORT</span>
+                        <span class="btn-icon"></span>
+                    </a>
+                    <div class="intel-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">DECLASSIFIED</span>
+                    </div>
+                </div>
+                
+                <!-- Corner accent -->
+                <div class="intel-corner-accent"></div>
+            </div>
+            
+            <!-- Intel Report 4 -->
+            <div class="intel-card" data-type="priority">
+                <div class="intel-security-scanner">
+                    <div class="scan-line"></div>
+                </div>
+                
+                <div class="intel-header">
+                    <div class="intel-badge priority">
+                        <span class="badge-icon"></span>
+                        <span class="badge-text">PRIORITY INTEL</span>
+                    </div>
+                    <div class="intel-id">ID: RV-INT-24-039</div>
+                </div>
+                
+                <div class="intel-body">
+                    <h3 class="intel-title">Critical Apache Tomcat Vulnerability: CVE-2025-24813</h3>
+                    
+                    <div class="intel-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon date-icon"></span>
+                            <span class="meta-text">April 2, 2024</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon time-icon"></span>
+                            <span class="meta-text">8 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon severity-icon critical"></span>
+                            <span class="meta-text">Severity: Critical</span>
+                        </div>
+                    </div>
+                    
+                    <div class="intel-excerpt">
+                        <p>Deep dive into CVE-2025-24813, a critical Apache Tomcat vulnerability enabling remote code execution in enterprise environments.</p>
+                    </div>
+                    
+                    <div class="intel-tags">
+                        <span class="intel-tag">CVE</span>
+                        <span class="intel-tag">Apache</span>
+                        <span class="intel-tag">Tomcat</span>
+                        <span class="intel-tag">RCE</span>
+                    </div>
+                </div>
+                
+                <div class="intel-footer">
+                    <a href="https://firecompass.com/critical-apache-tomcat-vulnerability-cve-2025-24813-enables-rce-are-you-vulnerable/" target="_blank" class="intel-action-btn">
+                        <span class="btn-text">ACCESS FULL REPORT</span>
+                        <span class="btn-icon"></span>
+                    </a>
+                    <div class="intel-status">
+                        <span class="status-dot priority"></span>
+                        <span class="status-text">PRIORITY</span>
+                    </div>
+                </div>
+                
+                <!-- Corner accent -->
+                <div class="intel-corner-accent priority"></div>
+            </div>
+                        <!-- Intel Report 5 -->
+            <div class="intel-card" data-type="priority">
+                <div class="intel-security-scanner">
+                    <div class="scan-line"></div>
+                </div>
+                
+                <div class="intel-header">
+                    <div class="intel-badge priority">
+                        <span class="badge-icon"></span>
+                        <span class="badge-text">PRIORITY INTEL</span>
+                    </div>
+                    <div class="intel-id">ID: RV-INT-24-039</div>
+                </div>
+                
+                <div class="intel-body">
+                    <h3 class="intel-title">Critical Ivanti Vulnerability: CVE-2025-22457</h3>
+                    
+                    <div class="intel-meta">
+                        <div class="meta-item">
+                            <span class="meta-icon date-icon"></span>
+                            <span class="meta-text">May 7, 2025</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon time-icon"></span>
+                            <span class="meta-text">5 min read</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-icon severity-icon critical"></span>
+                            <span class="meta-text">Severity: Critical</span>
+                        </div>
+                    </div>
+                    
+                    <div class="intel-excerpt">
+                        <p>CVE-2025-22457 is a critical stack-based buffer overflow vulnerability in Ivanti Connect Secure, Policy Secure, and ZTA Gateways that allows remote unauthenticated attackers to execute arbitrary code.</p>
+                    </div>
+                    
+                    <div class="intel-tags">
+                        <span class="intel-tag">CVE</span>
+                        <span class="intel-tag">Ivanti</span>
+                        <span class="intel-tag">Tomcat</span>
+                        <span class="intel-tag">RCE</span>
+                    </div>
+                </div>
+                
+                <div class="intel-footer">
+                    <a href="https://firecompass.com/critical-apache-tomcat-vulnerability-cve-2025-24813-enables-rce-are-you-vulnerable/" target="_blank" class="intel-action-btn">
+                        <span class="btn-text">ACCESS FULL REPORT</span>
+                        <span class="btn-icon"></span>
+                    </a>
+                    <div class="intel-status">
+                        <span class="status-dot priority"></span>
+                        <span class="status-text">PRIORITY</span>
+                    </div>
+                </div>
+                
+                <!-- Corner accent -->
+                <div class="intel-corner-accent priority"></div>
+            </div>
+        </div>
+        
+        <!-- Interactive Cyber Blog Access -->
+        <div class="intel-database-access">
+            <div class="database-header">
+                <div class="database-icon">
+                    <svg class="db-icon" viewBox="0 0 24 24">
+                        <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                    </svg>
+                </div>
+                <h3 class="database-title">INTERACTIVE CYBER INTELLIGENCE HUB</h3><br></br>
+                <p class="database-description">Beyond these featured reports, explore my comprehensive weekly cybersecurity learning journey. Each blog post is presented in an interactive, node-based format for enhanced engagement and deeper understanding.</p>
+            </div>
+            
+            <div class="database-stats">
+                <div class="stat-item">
+                    <div class="stat-value">10</div>
+                    <div class="stat-label">WEEKLY BLOGS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">SECURITY DOMAINS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">SELF PACED</div>
+                    <div class="stat-label">MODE</div>
+                </div>
+            </div>
+            
+            <div class="database-access">
+                <a href="Blog/cyber-blog.html" class="database-btn interactive-blog-btn">
+                    <span class="btn-text">ENTER CYBER INTELLIGENCE HUB</span>
+                    <span class="btn-icon">🚀</span>
+                </a>
+                <div class="access-note">CLEARANCE LEVEL: INTERACTIVE-MODE | LEARN AT YOUR OWN PACE</div>
+            </div>
+        </div>
+        
+        <!-- Security Scanner Effect -->
+        <div class="intelligence-scanner">
+            <div class="scanner-beam"></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Events Section -->
+
+<section class="events-section" id="events">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">EVENTS & CONFERENCES</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="events-timeline">
+            <!-- Event 1 -->
+            <div class="event-item">
+                <div class="event-date">
+                    <div class="date-badge">2024</div>
+                    <div class="date-line"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h3 class="event-title">BSides Ahmedabad</h3>
+                            <span class="event-location">Ahmedabad</span>
+                        </div>
+                        <div class="event-body">
+                            <p class="event-description">
+                                Got a chance to meet the great minds of Ccybersecurity
+                            </p>
+                            <div class="event-highlights">
+                                <span class="highlight-item">Bug Bounty</span>
+                                <span class="highlight-item">Events </span>
+                                <span class="highlight-item">Networking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Event 2 -->
+            <div class="event-item">
+                <div class="event-date">
+                    <div class="date-badge">2024</div>
+                    <div class="date-line"></div>
+                </div>
+                <div class="event-content">
+                    <div class="event-card">
+                        <div class="event-header">
+                            <h3 class="event-title">NCIIPC AICTE Pentathon 2024</h3>
+                            <span class="event-location">New Delhi</span>
+                        </div>
+                        <div class="event-body">
+                            <p class="event-description">
+                                NCIIPC AICTE Pentathon 2024 Finalist. Attended my first ever offline CTF challenge
+                            </p>
+                            <div class="event-highlights">
+                                <span class="highlight-item">Web Security</span>
+                                <span class="highlight-item">CTF</span>
+                                <span class="highlight-item">Top 100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Add more events as needed -->
+        </div>
+        
+        <div class="events-cta">
+            <a href="#contact" class="events-btn">
+                <span>INVITE ME TO SPEAK</span>
+                <span class="btn-icon">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section - With clearer title -->
+<section class="contact-section" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">CONTACT ME</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="comms-container">
+            <!-- Left panel: Contact form -->
+            <div class="contact-panel">
+                <div class="panel-header">
+                    <div class="header-icon"></div>
+                    <h3 class="panel-title">GET IN TOUCH</h3>
+                </div>
+                
+                    <!-- Example of accessible form (continued) -->
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xkgqbbka" method="POST" aria-label="Contact Form">
+                        <div class="form-group">
+                            <label class="form-label" for="contactName" id="contactNameLabel">YOUR NAME</label>
+                            <input type="text" id="contactName" name="name" class="form-input" placeholder="Your Name" required aria-labelledby="contactNameLabel" aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail" id="contactEmailLabel">YOUR EMAIL</label>
+                            <input type="email" id="contactEmail" name="email" class="form-input" placeholder="Your Email" required aria-labelledby="contactEmailLabel" aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="contactSubject" id="contactSubjectLabel">SUBJECT</label>
+                            <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Hire me for a Private Pentest" required aria-labelledby="contactSubjectLabel" aria-required="true">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="contactMessage" id="contactMessageLabel">MESSAGE</label>
+                            <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Your Message" required aria-labelledby="contactMessageLabel" aria-required="true"></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="submit-btn" aria-label="Send Message">
+                                <span class="btn-text">SEND MESSAGE</span>
+                                <span class="btn-icon" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div id="formStatus" role="status" aria-live="polite"></div>
+                    </form>
+            </div>
+            
+<div class="channels-panel">
+                    <div class="panel-header">
+                        <div class="header-icon"></div>
+                        <h3 class="panel-title">CONNECT WITH ME</h3>
+                    </div>
+                    
+                    <div class="channels-grid">
+                        <!-- Social Channel: GitHub -->
+                        <a href="https://github.com/iamaangx028" target="_blank" class="channel-link">
+                            <div class="channel-card">
+                                <div class="channel-icon github-icon"></div>
+                                <div class="channel-info">
+                                    <h4 class="channel-name">GITHUB</h4>
+                                    <p class="channel-id">@iamaangx028</p>
+                                </div>
+                                <div class="channel-status">ACTIVE</div>
+                            </div>
+                        </a>
+                        
+                        <!-- Social Channel: LinkedIn -->
+                        <a href="https://linkedin.com/in/rokkam-vamshi" target="_blank" class="channel-link">
+                            <div class="channel-card">
+                                <div class="channel-icon linkedin-icon"></div>
+                                <div class="channel-info">
+                                    <h4 class="channel-name">LINKEDIN</h4>
+                                    <p class="channel-id">@rokkam-vamshi</p>
+                                </div>
+                                <div class="channel-status">ACTIVE</div>
+                            </div>
+                        </a>
+                        
+                        <!-- Social Channel: Twitter -->
+                        <a href="https://x.com/rokkam_vamshi" target="_blank" class="channel-link">
+                            <div class="channel-card">
+                                <div class="channel-icon twitter-icon"></div>
+                                <div class="channel-info">
+                                    <h4 class="channel-name">TWITTER</h4>
+                                    <p class="channel-id">@rokkam_vamshi</p>
+                                </div>
+                                <div class="channel-status">ACTIVE</div>
+                            </div>
+                        </a>
+                        
+                        <!-- Social Channel: HackerOne -->
+                        <a href="https://hackerone.com/rokkam_vamshi_" target="_blank" class="channel-link">
+                            <div class="channel-card">
+                                <div class="channel-icon hackerone-icon"></div>
+                                <div class="channel-info">
+                                    <h4 class="channel-name">HACKERONE</h4>
+                                    <p class="channel-id">@rokkam_vamshi_</p>
+                                </div>
+                                <div class="channel-status">MONITORED</div>
+                            </div>
+                        </a>
+                        
+                        <!-- Social Channel: Medium -->
+                        <a href="https://rokkamvamshi18.medium.com" target="_blank" class="channel-link">
+                            <div class="channel-card">
+                                <div class="channel-icon medium-icon"></div>
+                                <div class="channel-info">
+                                    <h4 class="channel-name">MEDIUM</h4>
+                                    <p class="channel-id">@rokkamvamshi18</p>
+                                </div>
+                                <div class="channel-status">UPDATES</div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="response-time">
+                        <div class="response-header">AVERAGE RESPONSE TIME</div>
+                        <div class="response-meter">
+                            <div class="meter-value">< 24 HRS</div>
+                            <div class="meter-bar">
+                                <div class="meter-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Other social channels remain the same -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer-bg"></div>
+        <div class="footer-content">
+            <a href="#" class="footer-logo">
+                <div class="logo-icon">
+                    <div class="logo-inner"></div>
+                    <div class="logo-outer"></div>
+                </div>
+                <span class="logo-text">iamaangx028</span>
+            </a>
+            
+            <nav class="footer-nav">
+                <a href="#home" class="footer-link">HOME</a>
+                <a href="#about" class="footer-link">ABOUT</a>
+                <a href="#projects" class="footer-link">PROJECTS</a>
+                <a href="#skills" class="footer-link">SKILLS</a>
+                <a href="#certifications" class="footer-link">CREDENTIALS</a>
+                <a href="#trophies" class="footer-link">BUG BOUNTY</a>
+                <a href="#blog" class="footer-link">BLOG</a>
+                <a href="#contact" class="footer-link">CONTACT</a>
+            </nav>
+            
+            <div class="footer-social">
+                <a href="https://github.com/iamaangx028" target="_blank" class="social-link">GH</a>
+                <a href="https://linkedin.com/in/rokkam-vamshi" target="_blank" class="social-link">LI</a>
+                <a href="https://x.com/rokkam_vamshi" target="_blank" class="social-link">TW</a>
+                <a href="https://hackerone.com/rokkam_vamshi_" target="_blank" class="social-link">H1</a>
+                <a href="https://rokkamvamshi18.medium.com" target="_blank" class="social-link">MD</a>
+            </div>
+            
+            <p class="footer-text">
+                Made with 💖 by iamaangx028 | Cybersecurity Researcher focused on offensive security, vulnerability discovery, and creating secure digital environments.
+            </p>
+            
+            <div class="copyright">
+                &copy; <span id="year">2025</span> <span class="brand">Rokkam Vamshi</span>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript files -->
+
+<!-- <script src="js/jarvis.js"></script> -->
+<script src="js/main.js"></script>
+<script src="js/arsenel.js"></script>
+<script src="js/ui-interactions.js"></script>
+<script src="js/recognition-section.js"></script>
+<script src="js/intelligence-section.js"></script>
+<script src="js/resume.js"></script>
+<script src="js/cert.js "></script>
+<script src="js/cyber-blog-integration.js"></script>
+
+<!-- Advanced J.A.R.V.I.S. Widget -->
+<div class="jarvis-container" id="jarvisContainer">
+    <!-- Futuristic Activation Button -->
+    <div class="jarvis-activator" id="jarvisActivator">
+        <div class="jarvis-core"></div>
+        <div class="jarvis-notification" id="jarvisNotification">1</div>
+    </div>
+    
+    <!-- Advanced Holographic Interface -->
+    <div class="jarvis-interface" id="jarvisInterface">
+        <!-- Scan Line Effect -->
+        <div class="jarvis-scan-line"></div>
+        
+        <!-- Advanced Header -->
+        <div class="jarvis-header">
+            <div class="jarvis-title">
+                <div class="jarvis-logo">J.A.R.V.I.S.</div>
+                <div class="jarvis-power" id="jarvisPower" title="Shutdown">⏻</div>
+            </div>
+            <div class="jarvis-status-grid">
+                <div class="jarvis-stat">
+                    <div class="jarvis-stat-dot"></div>
+                    <span>ONLINE</span>
+                </div>
+                <div class="jarvis-stat">
+                    <div class="jarvis-stat-dot"></div>
+                    <span>READY</span>
+                </div>
+                <div class="jarvis-stat">
+                    <div class="jarvis-stat-dot"></div>
+                    <span>SECURE</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Chat Interface -->
+        <div class="jarvis-chat">
+            <div class="jarvis-messages" id="jarvisMessages">
+                <div class="jarvis-message assistant">
+                    <div class="jarvis-message-content">
+                        <strong> 🛰️ Warming up ...</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Typing Indicator -->
+            <div class="jarvis-typing" id="jarvisTyping" style="display: none;">
+                <span>J.A.R.V.I.S. is processing</span>
+                <div class="jarvis-typing-dots">
+                    <div class="jarvis-typing-dot"></div>
+                    <div class="jarvis-typing-dot"></div>
+                    <div class="jarvis-typing-dot"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Quick Actions Panel -->
+        <div class="jarvis-actions">
+            <div class="jarvis-actions-title">QUICK ACCESS PROTOCOLS</div>
+            <div class="jarvis-action-grid">
+                <button class="jarvis-action-btn" data-action="projects" title="View Portfolio Projects">
+                    <div class="jarvis-action-icon">⚡</div>
+                    <div class="jarvis-action-label">Projects</div>
+                </button>
+                <button class="jarvis-action-btn" data-action="resume" title="Download Resume">
+                    <div class="jarvis-action-icon">📊</div>
+                    <div class="jarvis-action-label">Resume</div>
+                </button>
+                <button class="jarvis-action-btn" data-action="skills" title="View Technical Skills">
+                    <div class="jarvis-action-icon">🛠️</div>
+                    <div class="jarvis-action-label">Skills</div>
+                </button>
+                <button class="jarvis-action-btn" data-action="cyber-blog" title="Interactive Cyber Blog">
+                    <div class="jarvis-action-icon">🚀</div>
+                    <div class="jarvis-action-label">Cyber Blog</div>
+                </button>
+                <button class="jarvis-action-btn" data-action="hire" title="Hiring Information">
+                    <div class="jarvis-action-icon">🤝</div>
+                    <div class="jarvis-action-label">Hire Me</div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Advanced J.A.R.V.I.S. JavaScript Engine -->
+<script>
+class AdvancedJarvis {
+    constructor() {
+        this.isActive = false;
+        this.messageCount = 0;
+        this.isTyping = false;
+        this.initializeSystem();
+        this.setupEventListeners();
+        this.startWelcomeSequence();
+    }
+    
+    initializeSystem() {
+        this.container = document.getElementById('jarvisContainer');
+        this.activator = document.getElementById('jarvisActivator');
+        this.interface = document.getElementById('jarvisInterface');
+        this.messages = document.getElementById('jarvisMessages');
+        this.notification = document.getElementById('jarvisNotification');
+        this.powerBtn = document.getElementById('jarvisPower');
+        this.typingIndicator = document.getElementById('jarvisTyping');
+        
+        console.log('🚀 J.A.R.V.I.S. Advanced System Initialized');
+    }
+    
+    setupEventListeners() {
+        // Activation button
+        this.activator.addEventListener('click', () => this.toggleInterface());
+        
+        // Power button
+        this.powerBtn.addEventListener('click', () => this.shutdown());
+        
+        // Action buttons
+        document.querySelectorAll('.jarvis-action-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => this.handleAction(e.target.closest('.jarvis-action-btn')));
+        });
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.altKey && e.key === 'j') {
+                e.preventDefault();
+                this.toggleInterface();
+            }
+            if (e.key === 'Escape' && this.isActive) {
+                this.closeInterface();
+            }
+        });
+        
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (this.isActive && !this.container.contains(e.target)) {
+                this.closeInterface();
+            }
+        });
+    }
+    
+    toggleInterface() {
+        if (this.isActive) {
+            this.closeInterface();
+        } else {
+            this.openInterface();
+        }
+    }
+    
+    openInterface() {
+        this.isActive = true;
+        this.interface.classList.add('active');
+        this.clearNotifications();
+        this.scrollToBottom();
+        
+        // Add system sound effect (visual feedback)
+        this.activator.style.animation = 'none';
+        setTimeout(() => {
+            this.activator.style.animation = 'jarvisPulse 2s infinite';
+        }, 10);
+    }
+    
+    closeInterface() {
+        this.isActive = false;
+        this.interface.classList.remove('active');
+        this.activator.style.animation = '';
+    }
+    
+    shutdown() {
+        this.addMessage('🔴 <strong>SHUTTING DOWN SYSTEM</strong><br>J.A.R.V.I.S. going offline. See you next time!', 'assistant');
+        setTimeout(() => {
+            this.closeInterface();
+        }, 2000);
+    }
+    
+    addMessage(content, type = 'assistant', showTyping = true) {
+        if (showTyping && type === 'assistant') {
+            this.showTyping();
+            setTimeout(() => {
+                this.hideTyping();
+                this.createMessage(content, type);
+            }, 1500);
+        } else {
+            this.createMessage(content, type);
+        }
+    }
+    
+    createMessage(content, type) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `jarvis-message ${type}`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'jarvis-message-content';
+        contentDiv.innerHTML = content;
+        
+        messageDiv.appendChild(contentDiv);
+        this.messages.appendChild(messageDiv);
+        this.scrollToBottom();
+        
+        // Update notification if interface is closed
+        if (!this.isActive) {
+            this.updateNotification();
+        }
+    }
+    
+    showTyping() {
+        if (this.isTyping) return;
+        this.isTyping = true;
+        this.typingIndicator.style.display = 'flex';
+        this.scrollToBottom();
+    }
+    
+    hideTyping() {
+        this.isTyping = false;
+        this.typingIndicator.style.display = 'none';
+    }
+    
+    updateNotification() {
+        this.messageCount++;
+        this.notification.textContent = this.messageCount;
+        this.notification.classList.add('active');
+    }
+    
+    clearNotifications() {
+        this.messageCount = 0;
+        this.notification.classList.remove('active');
+    }
+    
+    scrollToBottom() {
+        setTimeout(() => {
+            this.messages.scrollTop = this.messages.scrollHeight;
+        }, 100);
+    }
+    
+    handleAction(button) {
+        const action = button.dataset.action;
+        const actionName = button.querySelector('.jarvis-action-label').textContent;
+        
+        // Add ripple effect
+        this.addRippleEffect(button);
+        
+        // Add user message
+        this.addMessage(`Execute: ${actionName}`, 'user', false);
+        
+        // Handle specific actions
+        switch(action) {
+            case 'projects':
+                setTimeout(() => {
+                    this.addMessage('🎯 <strong>ACCESSING PROJECT DATABASE</strong><br>Navigating to portfolio projects section...');
+                    setTimeout(() => {
+                        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
+                        this.closeInterface();
+                    }, 1500);
+                }, 500);
+                break;
+                
+            case 'resume':
+                setTimeout(() => {
+                    this.addMessage('📊 <strong>RESUME DOWNLOAD INITIATED</strong><br>Preparing latest resume file...');
+                    setTimeout(() => {
+                        window.open('assets/Rokkam Vamshi Resume.pdf', '_blank');
+                    }, 1500);
+                }, 500);
+                break;
+                
+            case 'contact':
+                setTimeout(() => {
+                    this.addMessage('💬 <strong>CONTACT PROTOCOLS ACTIVATED</strong><br>Redirecting to communication channels...');
+                    setTimeout(() => {
+                        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+                        this.closeInterface();
+                    }, 1500);
+                }, 500);
+                break;
+                
+            case 'skills':
+                setTimeout(() => {
+                    this.addMessage('🛠️ <strong>SKILLS DATABASE ACCESS</strong><br>Loading technical capabilities and expertise...');
+                    setTimeout(() => {
+                        document.getElementById('skills').scrollIntoView({ behavior: 'smooth' });
+                        this.closeInterface();
+                    }, 1500);
+                }, 500);
+                break;
+                ṁ
+            case 'blog':
+                setTimeout(() => {
+                    this.addMessage('📖 <strong>INTELLIGENCE REPORTS ACCESS</strong><br>Loading security blogs and research articles...');
+                    setTimeout(() => {
+                        document.getElementById('blog').scrollIntoView({ behavior: 'smooth' });
+                        this.closeInterface();
+                    }, 1500);
+                }, 500);
+                break;
+                
+            case 'cyber-blog':
+                setTimeout(() => {
+                    this.addMessage('🚀 <strong>INTERACTIVE CYBER INTELLIGENCE HUB</strong><br>Launching immersive blog experience...');
+                    setTimeout(() => {
+                        // Use smooth transition instead of new tab
+                        if (window.cyberBlogIntegration) {
+                            window.cyberBlogIntegration.launchCyberBlog();
+                        } else {
+                            window.location.href = 'Blog/cyber-blog.html';
+                        }
+                        this.closeInterface();
+                    }, 1500);
+                }, 500);
+                break;
+                
+            case 'hire':
+                setTimeout(() => {
+                    this.addMessage('🤝 <strong>RECRUITMENT MODE ENGAGED</strong><br>Ready to discuss collaboration opportunities!');
+                    setTimeout(() => {
+                        this.addMessage('📧 <strong>DIRECT COMMUNICATION</strong><br>Email: vamshirokkam9@gmail.com<br>📞 Available for interviews<br>🔗 LinkedIn: rokkam-vamshi');
+                    }, 2000);
+                }, 500);
+                break;
+        }
+    }
+    
+    addRippleEffect(element) {
+        const ripple = document.createElement('div');
+        ripple.style.cssText = `
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0, 245, 255, 0.6);
+            transform: scale(0);
+            animation: jarvisRipple 0.6s linear;
+            pointer-events: none;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+        `;
+        
+        element.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    }
+    
+    startWelcomeSequence() {
+        // setTimeout(() => {
+        //     this.addMessage('🔧 <strong>SYSTEM DIAGNOSTICS COMPLETE</strong><br>All modules loaded successfully. Ready for advanced operations.');
+        // }, 3000);
+        
+        setTimeout(() => {
+            this.addMessage('🔧 <strong>Ready to help you!</strong>');
+        }, 3000);
+        
+        // setTimeout(() => {
+        //     this.addMessage('⚡ <strong>PERFORMANCE MODE</strong><br>Alt+J for quick toggle • Click outside to close • Optimized for lightning-fast navigation!');
+        // }, 9000);
+    }
+}
+
+// Add ripple animation CSS
+const rippleCSS = document.createElement('style');
+rippleCSS.textContent = `
+    @keyframes jarvisRipple {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(rippleCSS);
+
+// Initialize Advanced J.A.R.V.I.S. System
+document.addEventListener('DOMContentLoaded', () => {
+    window.jarvis = new AdvancedJarvis();
+    console.log('🤖 Advanced J.A.R.V.I.S. Online - Ready for commands');
+});
+</script>
+
+</body>
+</html>

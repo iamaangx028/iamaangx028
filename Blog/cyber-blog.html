@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Intelligence Hub - Rokkam Vamshi</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Interactive cybersecurity blog by Rokkam Vamshi - Navigate through security insights, vulnerability research, and technical articles in an immersive experience.">
+    <meta name="keywords" content="cybersecurity blog, security research, penetration testing, vulnerability analysis, ethical hacking">
+    <meta name="author" content="Rokkam Vamshi">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Security Intelligence Hub - Rokkam Vamshi">
+    <meta property="og:description" content="Interactive cybersecurity blog featuring security research and technical insights">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rokkamvamshi.github.io/Blog/cyber-blog.html">
+    
+    <!-- Preload Resources -->
+    <link rel="preload" href="cyber-blog.css" as="style">
+    <link rel="preload" href="cyber-blog-graph.css" as="style">
+    <link rel="preload" href="cyber-blog-graph.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="cyber-blog.css">
+    <link rel="stylesheet" href="cyber-blog-graph.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="../images/favicon-svg.svg">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <div class="security-scanner">
+                <div class="scan-line"></div>
+            </div>
+            <h2 id="loadingTitle">INITIALIZING SECURITY INTELLIGENCE HUB</h2>
+            <p id="loadingMessage">Starting up systems...</p>
+            <div class="loading-progress">
+                <div class="progress-bar" id="loadingProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <nav class="blog-nav">
+        <div class="nav-content">
+            <a href="../index.html#blog" class="nav-back">
+                <span class="nav-icon">←</span>
+                <span>BACK TO HQ</span>
+            </a>
+            <div class="nav-title">
+                <span class="security-badge">🛡️</span>
+                SECURITY INTELLIGENCE HUB
+            </div>
+            <div class="nav-controls">
+                <button class="nav-info-btn" id="navInfoBtn" title="View Navigation Guide">
+                    <span class="info-text">📝 How to Navigate</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="cyber-blog-container">
+        <!-- Background Environment -->
+        <div class="cyber-environment">
+            <div class="cyber-grid"></div>
+        </div>
+
+        <!-- Graph Navigation System -->
+        <div class="graph-navigation-system">
+            <!-- Graph Container -->
+            <div id="graphContainer" class="cyber-graph-container">
+                <!-- SVG for Edges -->
+                <svg id="edgesSVG" class="edges-svg" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Dynamic edges will be generated here -->
+                </svg>
+                <!-- Nodes will be dynamically generated here -->
+            </div>
+        </div>
+
+
+    </main>
+
+    <!-- Post Detail Modal -->
+    <div class="post-modal" id="postModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title" id="modalTitle">Loading Intel...</div>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Post content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Info Modal -->
+    <div class="info-modal" id="infoModal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">NAVIGATION GUIDE</div>
+                <button class="modal-close" id="infoModalClose">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="info-content">
+                    <div class="info-header">
+                        <div class="info-icon">🎯</div>
+                        <h1 class="info-title">SECURITY INTELLIGENCE HUB</h1>
+                        <div class="info-subtitle">Advanced Cybersecurity Research & Analysis</div>
+                    </div>
+                    
+                    <div class="info-description">
+                        <p>Welcome to the <strong>Security Intelligence Hub</strong> - an interactive knowledge base featuring cutting-edge cybersecurity research, vulnerability analysis, and technical insights from real-world security operations.</p>
+                        
+                        <div class="usage-guide">
+                            <h3>🚀 How to Navigate:</h3>
+                            <div class="guide-steps">
+                                <div class="guide-step">
+                                    <span class="step-number">1</span>
+                                    <span class="step-text">Browse the <strong>cyber grid</strong> below to discover security topics</span>
+                                </div>
+                                <div class="guide-step">
+                                    <span class="step-number">2</span>
+                                    <span class="step-text"><strong>Click any node</strong> to access detailed intelligence reports</span>
+                                </div>
+                                <div class="guide-step">
+                                    <span class="step-number">3</span>
+                                    <span class="step-text">Scroll through the grid to explore all available missions</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="intelligence-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="infoTotalPosts">0</span>
+                                <span class="stat-label">Security Reports</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="infoTotalTopics">0</span>
+                                <span class="stat-label">Topics Covered</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="infoLastUpdated">2025</span>
+                                <span class="stat-label">Latest Intel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="cyber-blog-graph.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<svg viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1A1A2E" />
+    <stop offset="100%" stop-color="#0F3460" />
+  </linearGradient>
+  <rect width="1280" height="640" fill="url(#bg-gradient)" />
+  
+  <!-- Decorative hexagon grid pattern -->
+  <pattern id="hexgrid" width="60" height="100" patternUnits="userSpaceOnUse" patternTransform="scale(0.5)">
+    <path d="M30 0 L60 17.5 L60 52.5 L30 70 L0 52.5 L0 17.5 Z" fill="none" stroke="#ffffff10" stroke-width="1" />
+  </pattern>
+  <rect width="1280" height="640" fill="url(#hexgrid)" />
+  
+  <!-- Left side: JS Logo -->
+  <g transform="translate(250, 220)">
+    <rect x="0" y="0" width="200" height="200" fill="#F7DF1E" />
+    <path d="M50,167 C58,180 76,191 100,191 C124,191 140,179 140,155 C140,134 124,127 97,113 C66,100 50,86 50,57 C50,29 70,10 104,10 C128,10 147,20 160,39 L134,57 C126,43 115,38 104,38 C92,38 82,45 82,57 C82,73 91,78 120,93 C156,111 172,124 172,154 C172,186 146,210 100,210 C56,210 31,188 19,167 L50,167 Z" fill="#1A1A2E" />
+  </g>
+  
+  <!-- Right side: Radar -->
+  <g transform="translate(750, 320)">
+    <circle cx="0" cy="0" r="150" fill="none" stroke="#4CAF50" stroke-width="4" />
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#4CAF50" stroke-width="3" />
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#4CAF50" stroke-width="2" />
+    
+    <!-- Radar lines -->
+    <line x1="-150" y1="0" x2="150" y2="0" stroke="#4CAF5030" stroke-width="2" />
+    <line x1="0" y1="-150" x2="0" y2="150" stroke="#4CAF5030" stroke-width="2" />
+    <line x1="-106" y1="-106" x2="106" y2="106" stroke="#4CAF5030" stroke-width="2" />
+    <line x1="-106" y1="106" x2="106" y2="-106" stroke="#4CAF5030" stroke-width="2" />
+    
+    <!-- Radar sweep -->
+    <path d="M0,0 L150,0 A150,150 0 0,0 106,-106 z" fill="#4CAF5040">
+      <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="3s" repeatCount="indefinite" />
+    </path>
+    
+    <!-- Radar blips -->
+    <circle cx="75" cy="40" r="8" fill="#4CAF50">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="-60" cy="-50" r="6" fill="#4CAF50">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="30" cy="-90" r="7" fill="#4CAF50">
+      <animate attributeName="opacity" values="1;0.2;1" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+  
+  <!-- Code blocks -->
+  <g transform="translate(500, 150)" opacity="0.5">
+    <rect x="0" y="0" width="300" height="30" rx="5" fill="#ffffff10" />
+    <rect x="20" y="50" width="250" height="30" rx="5" fill="#ffffff10" />
+    <rect x="40" y="100" width="200" height="30" rx="5" fill="#ffffff10" />
+    <rect x="20" y="150" width="270" height="30" rx="5" fill="#ffffff10" />
+    <rect x="0" y="200" width="320" height="30" rx="5" fill="#ffffff10" />
+  </g>
+  
+  <!-- Title and description -->
+  <text x="640" y="450" font-family="Arial, sans-serif" font-size="72" font-weight="bold" text-anchor="middle" fill="#F7DF1E">JSRadar</text>
+  <text x="640" y="510" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#fff">JavaScript Enumeration &amp; Analysis Tool</text>
+  
+  <!-- Smaller subtitle -->
+  <text x="640" y="560" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#4CAF50">Uncover hidden endpoints, secrets, and vulnerabilities</text>
+</svg>
