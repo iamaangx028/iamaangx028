@@ -1,4 +1,4 @@
-up# Rokkam Vamshi - Cybersecurity Portfolio
+# Rokkam Vamshi - Cybersecurity Portfolio
 
 ![Security Level](https://img.shields.io/badge/Security%20Level-Verified-brightgreen)
 ![Stack](https://img.shields.io/badge/Stack-HTML%20%7C%20CSS%20%7C%20JavaScript-blue)
