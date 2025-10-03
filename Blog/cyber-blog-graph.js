@@ -734,10 +734,10 @@ class BlogGraphEngine {
                     <div class="intel-header">
                         <div class="intel-badge">
                             <span class="intel-icon">🛰️</span>
-                            INTELLIGENCE BRIEF
+                            ABOUT THE BLOG
                         </div>
                         <div class="security-clearance">
-                            <span class="clearance-level">LEVEL ${node.post.difficulty}</span>
+                            <span class="clearance-level">${node.post.difficulty}</span>
                         </div>
                     </div>
 
@@ -746,7 +746,7 @@ class BlogGraphEngine {
                         <div class="param-card">
                             <div class="param-icon">📅</div>
                             <div class="param-content">
-                                <div class="param-label">DEPLOYMENT DATE</div>
+                                <div class="param-label">PUBLISHED DATE</div>
                                 <div class="param-value">${new Date(node.post.date).toLocaleDateString('en-US', {
                                     year: 'numeric',
                                     month: 'short',
@@ -766,10 +766,10 @@ class BlogGraphEngine {
                         <div class="param-card">
                             <div class="param-icon">⭐</div>
                             <div class="param-content">
-                                <div class="param-label">THREAT LEVEL</div>
+                                <div class="param-label">DIFFICULTY LEVEL</div>
                                 <div class="param-value">
                                     <span class="threat-stars">${'★'.repeat(node.post.difficulty)}${'☆'.repeat(5-node.post.difficulty)}</span>
-                                    <span class="threat-rating">${node.post.difficulty}/5</span>
+                                    <span class="threat-rating">${node.post.difficulty}</span>
                                 </div>
                             </div>
                         </div>
@@ -777,7 +777,7 @@ class BlogGraphEngine {
                         <div class="param-card">
                             <div class="param-icon">⏱️</div>
                             <div class="param-content">
-                                <div class="param-label">SCAN TIME</div>
+                                <div class="param-label">READ TIME</div>
                                 <div class="param-value">${node.post.readTime}</div>
                             </div>
                         </div>
@@ -787,7 +787,7 @@ class BlogGraphEngine {
                     <div class="intel-summary">
                         <div class="summary-header">
                             <span class="summary-icon">📋</span>
-                            <span class="summary-title">MISSION BRIEFING</span>
+                            <span class="summary-title">DESCRIPTION</span>
                         </div>
                         <div class="summary-content">
                             ${node.post.description}
@@ -798,7 +798,7 @@ class BlogGraphEngine {
                     <div class="target-systems">
                         <div class="systems-header">
                             <span class="systems-icon">🎯</span>
-                            <span class="systems-title">TARGET SYSTEMS</span>
+                            <span class="systems-title">TOPICS COVERED</span>
                         </div>
                         <div class="systems-tags">
                             ${node.post.topics.map(topic =>
@@ -811,12 +811,12 @@ class BlogGraphEngine {
                     <div class="action-protocols">
                         <button class="protocol-btn primary-protocol" onclick="window.open('${node.post.blogUrl}', '_blank')">
                             <span class="protocol-icon">🚀</span>
-                            <span class="protocol-text">INITIATE MISSION</span>
+                            <span class="protocol-text">TAKE ME TO BLOG</span>
                         </button>
 
                         <button class="protocol-btn secondary-protocol" onclick="navigator.clipboard.writeText('${node.post.blogUrl}').then(() => this.showNotification('Mission coordinates copied to clipboard!'))">
                             <span class="protocol-icon">📡</span>
-                            <span class="protocol-text">COPY COORDINATES</span>
+                            <span class="protocol-text">COPY LINK</span>
                         </button>
                     </div>
                 </div>
