@@ -564,7 +564,7 @@
             <!-- <a href="#blog" class="nav-link">BLOGS</a> -->
             <a href="#events" class="nav-link">EVENTS</a>
             <a href="#contact" class="nav-link">CONTACT ME</a>
-            <a href="Blog/cyber-blog.html" class="nav-link nav-link-external" target="_self">CYBER BLOG</a>
+            <a href="Blog/cyber-blog.html" class="nav-link nav-link-external" target="_self">WEEKLY BLOG</a>
         </div>
         
         <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
@@ -2471,7 +2471,7 @@
             </p>
             
             <div class="copyright">
-                &copy; <span id="year">2025</span> <span class="brand">Rokkam Vamshi</span>. All rights reserved.
+                &copy; <span id="year">2025</span> <span class="brand">Rokkam iamaangx028</span>. All rights reserved.
             </div>
         </div>
     </footer>
@@ -2556,9 +2556,9 @@
                     <div class="jarvis-action-icon">📊</div>
                     <div class="jarvis-action-label">Resume</div>
                 </button>
-                <button class="jarvis-action-btn" data-action="cyber-blog" title="Interactive Cyber Blog">
+                <button class="jarvis-action-btn" data-action="cyber-blog" title="Interactive Weekly Blog">
                     <div class="jarvis-action-icon">🚀</div>
-                    <div class="jarvis-action-label">Cyber Blog</div>
+                    <div class="jarvis-action-label">Weekly Blog</div>
                 </button>
                 <button class="jarvis-action-btn" data-action="hire" title="Hiring Information">
                     <div class="jarvis-action-icon">🤝</div>
@@ -2652,7 +2652,7 @@ class AdvancedJarvis {
     }
     
     shutdown() {
-        this.addMessage('🔴 <strong>SHUTTING DOWN SYSTEM</strong><br>J.A.R.V.I.S. going offline. See you next time!', 'assistant');
+        this.addMessage('🔴 J.A.R.V.I.S. going offline. See you next time!', 'assistant');
         setTimeout(() => {
             this.closeInterface();
         }, 2000);
@@ -2731,7 +2731,7 @@ class AdvancedJarvis {
         switch(action) {
             case 'projects':
                 setTimeout(() => {
-                    this.addMessage('🎯 <strong>ACCESSING PROJECT DATABASE</strong><br>Navigating to portfolio projects section...');
+                    this.addMessage('🎯 <strong>ACCESSING PROJECT DATABASE</strong><br>Taking you to projects section...');
                     setTimeout(() => {
                         document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
                         this.closeInterface();
@@ -2829,17 +2829,9 @@ class AdvancedJarvis {
     }
     
     startWelcomeSequence() {
-        // setTimeout(() => {
-        //     this.addMessage('🔧 <strong>SYSTEM DIAGNOSTICS COMPLETE</strong><br>All modules loaded successfully. Ready for advanced operations.');
-        // }, 3000);
-        
         setTimeout(() => {
             this.addMessage('🔧 <strong>Ready to help you!</strong>');
-        }, 3000);
-        
-        // setTimeout(() => {
-        //     this.addMessage('⚡ <strong>PERFORMANCE MODE</strong><br>Alt+J for quick toggle • Click outside to close • Optimized for lightning-fast navigation!');
-        // }, 9000);
+        }, 1500);
     }
 }
 
