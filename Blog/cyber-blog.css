@@ -175,6 +175,7 @@ body {
     transition: all var(--transition-fast);
     font-size: 0.9rem;
     font-weight: 600;
+    font-family: var(--font-cyber);
 }
 
 .nav-back:hover {
@@ -191,6 +192,7 @@ body {
     font-weight: 700;
     color: var(--cyber-primary);
     text-shadow: 0 0 10px var(--cyber-primary);
+    font-family: var(--font-cyber);
 }
 
 .security-badge {
@@ -209,15 +211,14 @@ body {
     gap: var(--space-xs);
     background: var(--bg-glass);
     border: 1px solid var(--cyber-primary);
-    color: var(--cyber-primary);
+    color: var(--text-primary);
     padding: var(--space-xs) var(--space-sm);
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 600;
+    font-family: var(--font-cyber);
     transition: all var(--transition-fast);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .nav-info-btn:hover {
@@ -232,7 +233,7 @@ body {
 }
 
 .nav-info-btn .info-text {
-    font-family: var(--font-mono);
+    font-family: var(--font-cyber);
 }
 
 .system-status {
