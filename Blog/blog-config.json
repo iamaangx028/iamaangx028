@@ -1,11 +1,11 @@
 {
   "settings": {
-    "title": "Cyber Intelligence Hub",
+    "title": "Weekly Blog Hub",
     "description": "Interactive cybersecurity blog integrated with iamaangx028's main portfolio",
-    "version": "1.0.0",
-    "lastUpdated": "2025-10-03",
+    "version": "1.0.1",
+    "lastUpdated": "2025-10-05",
     "autoSort": "by-week",
-    "nextWeekId": "week12",
+    "nextWeekId": "week13",
     "integration": {
       "mainPortfolio": "../index.html#blog",
       "jarvisSupport": true,
@@ -36,7 +36,7 @@
   "posts": {
     "week1": {
       "title": "Week 1 ",
-      "description": "Foundational topics: OSI Model, TCP/IP stack, Subnetting, and DNS.",
+      "description": "The OSI Journey begins with 7 layers of network magic - from Application to Physical. Learn how data transforms through each layer, understand TCP/IP's practical dominance over OSI, master subnetting to divide networks efficiently with CIDR notation, and discover how DNS acts as the internet's phonebook converting domain names to IP addresses through recursive resolvers and authoritative servers.",
       "blogUrl": "https://infosecwriteups.com/week-1-learning-basic-concepts-of-cybersecurity-417434e71752",
       "sector": "Network",
       "date": "Jun 22, 2025",
@@ -48,7 +48,7 @@
     },
     "week2": {
       "title": "Week 2 ",
-      "description": "Networking fundamentals: PAN/LAN/VLAN/WLAN/CAN/SAN/MAN/WAN, hubs/switches/routers/modems, Bluetooth/Wi‑Fi security, ARP poisoning, SSL/TLS.",
+      "description": "Journey from PAN to WAN network types, understand how hubs broadcast blindly while switches route intelligently using MAC addresses, discover why routers are passport officers connecting different networks, learn wireless security evolution from vulnerable WEP to secure WPA3, explore ARP poisoning MITM attacks, master SSL/TLS handshakes using both asymmetric and symmetric encryption, and compare TCP's reliable connection-oriented approach vs UDP's fast connectionless transmission.",
       "blogUrl": "https://iamaangx028.medium.com/week-2-learning-basic-concepts-of-cybersecurity-6e7fd6d57bbf",
       "sector": "Network",
       "date": "Jun 28, 2025",
@@ -60,7 +60,7 @@
     },
     "week3": {
       "title": "Week 3",
-      "description": "Browsers and the Web: Internet vs WWW, browser evolution and architecture, rendering pipeline (DOM/CSSOM/JS), omnibox.",
+      "description": "Browser Wars unveiled - Internet vs WWW clarified (highway vs cars analogy), browser evolution from WorldWideWeb to Chrome dominance, deep dive into browser architecture with rendering engine creating DOM/CSSOM/Render Tree, understand SOP (Same-Origin Policy) protecting you since Netscape Navigator 2, learn CSP directives controlling resource loading, explore browser sandboxing with Parent/Child process isolation preventing drive-by downloads, and master CORS for controlled cross-origin resource sharing.",
       "blogUrl": "https://iamaangx028.medium.com/week-3-learning-basic-concepts-of-cybersecurity-c68a72096e07",
       "sector": "Browser",
       "date": "Jul 6, 2025",
@@ -72,7 +72,7 @@
     },
     "week4": {
       "title": "Week 4",
-      "description": "Browser security: isolated storage per origin, subresource integrity, cookie attributes (SameSite/HttpOnly/Secure), strict MIME type checking, clickjacking defense.",
+      "description": "Cookies & Browser Security unleashed - compare LocalStorage/SessionStorage/Cookies/IndexedDB storage types, implement Subresource Integrity (SRI) using SHA384 hashes to verify third-party resources, understand SameSite cookie attribute preventing CSRF (Lax vs Strict vs None), use HttpOnly to block JavaScript cookie access stopping XSS theft, set Secure flag for HTTPS-only transmission, enforce strict MIME type checking preventing content-type confusion attacks, and deploy X-Frame-Options defending against clickjacking.",
       "blogUrl": "https://infosecwriteups.com/week-4-learning-basic-concepts-of-cybersecurity-bac604938cb7",
       "sector": "Browser",
       "date": "Jul 11, 2025",
@@ -84,7 +84,7 @@
     },
     "week5": {
       "title": "Week 5 ",
-      "description": "Web fundamentals: HTTP evolution (0.9 to 3.0), TLS/SSL history, content negotiation, caching and headers.",
+      "description": "HTTP's Epic Evolution - HTTP/0.9 with just GET requests, HTTP/1.0 introducing POST/status codes/headers, HTTP/1.1 adding persistent connections and pipelining but suffering head-of-line blocking, HTTP/2.0 revolutionizing with binary framing/multiplexing/header compression using HPACK solving HOL blocking, HTTP/3.0 switching from TCP to QUIC over UDP for better performance. Learn SSL/TLS evolution from Netscape, understand content negotiation (server-driven vs agent-driven), and discover how Burp Suite MITMs HTTPS traffic.",
       "blogUrl": "https://infosecwriteups.com/week-5-learning-basic-concepts-of-cybersecurity-ae310b92ab71",
       "sector": "HTTP",
       "date": "Jul 20, 2025",
@@ -96,7 +96,7 @@
     },
     "week6": {
       "title": "Week 6 ",
-      "description": "System design basics: proxies, reverse proxies, latency, REST/SOAP APIs, CDNs, WebSockets, webhooks, microservices, message queues, API gateway, rate limiting, idempotency, servers.",
+      "description": "System Design Secrets revealed - forward proxy protects clients while reverse proxy shields servers, understand REST API stateless nature vs GraphQL's efficient querying, scale vertically by upgrading specs or horizontally by adding servers, implement load balancers distributing traffic intelligently, use database indexing/sharding/replication for performance, leverage CDNs reducing latency globally, employ WebSockets for real-time bidirectional communication, utilize webhooks for event-driven data transfer, architect microservices with message queues (RabbitMQ/Kafka), protect with API gateways handling auth/rate limiting/idempotency, and master NGINX capabilities as web server/reverse proxy/load balancer.",
       "blogUrl": "https://infosecwriteups.com/week-6-learning-basic-concepts-of-cybersecurity-d2a27e136f24",
       "sector": "Infrastructure",
       "date": "Jul 27, 2025",
@@ -108,7 +108,7 @@
     },
     "week7": {
       "title": "Week 7 ",
-      "description": "Web app architecture: client‑server, monoliths, microservices, serverless, MVC, SOA, SPA fundamentals.",
+      "description": "Architectural Alchemy of modern web apps - compare client-server vs monolithic (single entity) vs microservices (independent services with separate DBs) vs serverless (pay-as-you-go cloud), understand MVC pattern where Controller acts as postman between Model and View, explore Service-oriented Architecture utilizing third-party services, contrast SPA (Single Page App loading once) vs MPA (Multi-Page App requesting each page) vs PWA (Progressive Web App like native), master 3-tier architecture separating Presentation/Application/Data layers, and review frontend (HTML/CSS/JS with React/Angular/Vue) and backend (PHP/Python/Java/Ruby with Laravel/Django/Spring Boot) technology stacks.",
       "blogUrl": "https://infosecwriteups.com/week-7-learning-basic-concepts-of-cybersecurity-09b4170209d1",
       "sector": "Web Development",
       "date": "Aug 1, 2025",
@@ -120,7 +120,7 @@
     },
     "week8": {
       "title": "Week 8 ",
-      "description": "HTTP headers deep dive: request/response classes, auth headers, CORS, representation headers, cookies/state, caching, HSTS, and key security headers.",
+      "description": "Header Heroes - HTTP's secret security weapons decoded: Authorization header for credentials, Access-Control-Allow-Origin/Credentials/Methods for CORS configuration, Accept/Content-Type/Content-Length for representation negotiation, Cookie/Set-Cookie for state management, Connection/Upgrade for protocol handling, Location for redirects, Content-Security-Policy directives (default-src/script-src/img-src) blocking XSS, ETag/If-None-Match for cache validation, Cache-Control directives (private/public/no-store/max-age) optimizing performance, Strict-Transport-Security enforcing HTTPS-only, X-Frame-Options preventing clickjacking, and comprehensive list of 65+ headers with security implications.",
       "blogUrl": "https://iamaangx028.medium.com/week-8-learning-basic-concepts-of-cybersecurity-77c6e4d588c5",
       "sector": "HTTP Security",
       "date": "Sep 7, 2025",
@@ -132,7 +132,7 @@
     },
     "week9": {
       "title": "Week 9",
-      "description": "Front‑end and back‑end overview: static→dynamic web, CGI to application servers, backend languages/frameworks, app servers, front‑end frameworks and meta‑frameworks.",
+      "description": "Frontend meets Backend battlefield - evolution from static HTML to dynamic sites via CGI (Common Gateway Interface) spawning processes per request, transition to application servers (Gunicorn/PHP-FPM/Tomcat/Kestrel) keeping frameworks alive, backend stack with PHP/Java/Python/Ruby/JavaScript and frameworks (Laravel/Spring Boot/Django/Rails/Node.js), understand flow: Browser→Web Server (Nginx)→App Server→Framework→Database→Response, frontend JavaScript executed by browser's JS engine following ECMAScript standards, compare Angular (full framework), React (UI library), Vue (lightweight) and meta-frameworks Next.js/Nuxt.js adding SSR/SSG capabilities.",
       "blogUrl": "https://iamaangx028.medium.com/week-9-learning-basic-concepts-of-cybersecurity-dea9932c4a0f",
       "sector": "Front-end & Back-end",
       "date": "Sep 14, 2025",
@@ -144,7 +144,7 @@
     },
     "week10": {
       "title": "Week 10",
-      "description": "Front‑end concepts: Vanilla JS, JSX, AJAX, components, and SPA routing basics.",
+      "description": "JavaScript Journeys - Vanilla JS is pure unflavored JavaScript without frameworks (all tools built on this), JSX combines JavaScript + HTML in React (write <h1>Hello</h1> inside functions), AJAX (Asynchronous JavaScript and XML) using XMLHttpRequest or modern fetch()/axios for no-reload data loading, Components are reusable independent building blocks (functional or class-based returning JSX), and SPA (Single Page Application) routing with react-router-dom changing URL/components without page reloads like a movie theater changing scenes on one screen - understanding these patterns helps discover hidden API endpoints and client-side vulnerabilities.",
       "blogUrl": "https://iamaangx028.medium.com/week-10-learning-basic-concepts-of-cybersecurity-1638b6b19c84",
       "sector": "Front-end security",
       "date": "Sep 21, 2025",
@@ -156,13 +156,25 @@
     },
     "week11": {
       "title": "Week 11",
-      "description": "React Core Concepts: DOM Manipulation & State Management, APIs, Props, Controlled vs Uncontrolled Components, and SPA fundamentals.",
+      "description": "React Core Concepts mastered - Virtual DOM solves expensive browser DOM manipulation by keeping lightweight JavaScript representation in memory, comparing old vs new virtual DOM (Reconciliation), then applying minimal changes to real DOM, Props pass read-only data from parent to child components enabling dynamic reusability, State (useState hook) is component's memory auto-triggering re-renders when changed via setter functions, Controlled Components (value + onChange) validate instantly as you type showing real-time errors, Uncontrolled Components (ref) only validate on submission causing page reloads - understanding these patterns crucial for identifying client-side attack vectors in modern React applications.",
       "blogUrl": "https://iamaangx028.medium.com/week-11-learning-basic-concepts-of-cybersecurity-0316beed3df7",
       "sector": "Front-end security",
       "date": "Sep 28, 2025",
       "difficulty": "Intermediate",
       "readTime": "5 min",
       "topics": ["Dom Manipulation", "State Management", "APIs", "Props", "Uncontrolled Component", "Controlled Component","SPA"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week12": {
+      "title": "Week 12",
+      "description": "Async API Calls: Fetch, Axios, and Promises - Learn how to handle asynchronous operations in JavaScript using Fetch API and Axios library, along with understanding Promises for better error handling and code readability.",
+      "blogUrl": "https://medium.com/@iamaangx028/week-12-async-api-calls-fetch-axios-and-promises-f8da63c5d91c",
+      "sector": "Front-end security",
+      "date": "Oct 5, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "4 min",
+      "topics": ["Async", "API Calls", "Fetch", "Axios", "Promises", "bug bounty tips", "javascript tips"],
       "category": "web-security",
       "status": "published"
     }
