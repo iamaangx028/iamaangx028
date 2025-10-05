@@ -74,7 +74,7 @@ rokkamvamshi.github.io/
 
 ## 📞 Contact Information
 
-- **Email**: [vamsirokkam9@gmail.com](mailto:iamaangx028@gmail.com)
+- **Email**: [iamaangx028@gmail.com](mailto:iamaangx028@gmail.com)
 ---
 
-**Made with ❤️ by Rokkam Vamshi** | *Securing the digital frontier, one line of code at a time*
+**Made with ❤️ by iamaangx028** | *Securing the digital frontier, one line of code at a time*
