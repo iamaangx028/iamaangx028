@@ -57,13 +57,13 @@ rokkamvamshi.github.io/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/rokkamvamshi/rokkamvamshi.github.io.git
+   git clone [https://github.com/iamaangx028/iamaangx028.github.io](https://github.com/iamaangx028/iamaangx028.github.io)
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd rokkamvamshi.github.io
+   cd iamaangx028.github.io
    ```
 
 3. Open `index.html` in your browser to view the main portfolio, or navigate to `Blog/cyber-blog.html` for the interactive blog.
