@@ -144,7 +144,7 @@
     },
     "week10": {
       "title": "Week 10",
-      "description": "JavaScript Journeys - Vanilla JS is pure unflavored JavaScript without frameworks (all tools built on this), JSX combines JavaScript + HTML in React (write <h1>Hello</h1> inside functions), AJAX (Asynchronous JavaScript and XML) using XMLHttpRequest or modern fetch()/axios for no-reload data loading, Components are reusable independent building blocks (functional or class-based returning JSX), and SPA (Single Page Application) routing with react-router-dom changing URL/components without page reloads like a movie theater changing scenes on one screen - understanding these patterns helps discover hidden API endpoints and client-side vulnerabilities.",
+      "description": "JavaScript Journeys - Vanilla JS is pure unflavored JavaScript without frameworks (all tools built on this), JSX combines JavaScript + HTML in React (write Hello inside functions), AJAX (Asynchronous JavaScript and XML) using XMLHttpRequest or modern fetch()/axios for no-reload data loading, Components are reusable independent building blocks (functional or class-based returning JSX), and SPA (Single Page Application) routing with react-router-dom changing URL/components without page reloads like a movie theater changing scenes on one screen - understanding these patterns helps discover hidden API endpoints and client-side vulnerabilities.",
       "blogUrl": "https://iamaangx028.medium.com/week-10-learning-basic-concepts-of-cybersecurity-1638b6b19c84",
       "sector": "Front-end security",
       "date": "Sep 21, 2025",
