@@ -68,23 +68,13 @@ rokkamvamshi.github.io/
 
 3. Open `index.html` in your browser to view the main portfolio, or navigate to `Blog/cyber-blog.html` for the interactive blog.
 
-##  License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## 👤 About the Developer
 
-[Rokkam Vamshi](https://linkedin.com/in/rokkam-vamshi) is a cybersecurity specialist with expertise in penetration testing, bug bounty hunting, and vulnerability research. With a passion for sharing knowledge, he maintains this portfolio as both a professional showcase and an educational resource for the cybersecurity community.
+[iamaangx028](https://x.com/iamaangx028), I am a security researcher with a passion for sharing knowledge. This portfolio stands as both a professional showcase and an educational resource for the cybersecurity community.
 
 ## 📞 Contact Information
 
-- **Email**: [vamsirokkam9@gmail.com](mailto:vamsirokkam9@gmail.com)
-- **LinkedIn**: [rokkam-vamshi](https://linkedin.com/in/rokkam-vamshi)
-- **GitHub**: [rokkamvamshi](https://github.com/rokkamvamshi)
-- **Medium**: [@iamaangx028](https://medium.com/@iamaangx028)
-- **HackerOne**: [@rokkam_vamshi_](https://hackerone.com/rokkam_vamshi_)
-- **Twitter**: [@rokkam_vamshi](https://twitter.com/rokkam_vamshi)
-
+- **Email**: [vamsirokkam9@gmail.com](mailto:iamaangx028@gmail.com)
 ---
 
 **Made with ❤️ by Rokkam Vamshi** | *Securing the digital frontier, one line of code at a time*
