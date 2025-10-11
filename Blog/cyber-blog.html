@@ -56,10 +56,25 @@
             <div class="nav-title" id="navTitle">
                 Weekly Learning Blog
             </div>
-            <div class="nav-controls">
-                <button class="nav-info-btn" id="navInfoBtn" title="View Navigation Guide">
-                    <span class="info-text"> Click Me</span>
-                </button>
+            <div class="nav-right">
+                <div class="nav-search">
+                    <div class="search-container">
+                        <input 
+                            type="text" 
+                            id="blogSearchInput" 
+                            class="search-input" 
+                            placeholder="🔍 Search topics, categories..."
+                            autocomplete="off"
+                        >
+                        <button class="search-clear" id="searchClearBtn" title="Clear search">✕</button>
+                        <div class="search-results-count" id="searchResultsCount"></div>
+                    </div>
+                </div>
+                <div class="nav-controls">
+                    <button class="nav-info-btn" id="navInfoBtn" title="View Navigation Guide">
+                        <span class="info-text"> Click Me</span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
@@ -113,7 +128,7 @@
                     <div class="info-header">
                         <div class="info-icon">🎯</div>
                         <h1 class="info-title">Weekly Learning Blog</h1>
-                        <div class="info-subtitle">Advanced Cybersecurity Research & Analysis</div>
+                        <div class="info-subtitle">A Self Paced Learning Journey</div>
                     </div>
                     
                     <div class="info-description">
@@ -128,7 +143,7 @@
                                 </div>
                                 <div class="guide-step">
                                     <span class="step-number">2</span>
-                                    <span class="step-text"><strong>Click any node</strong> to access detailed intelligence reports</span>
+                                    <span class="step-text"><strong>Click any node</strong> to access details related to that week's blog</span>
                                 </div>
                                 <div class="guide-step">
                                     <span class="step-number">3</span>
@@ -147,7 +162,7 @@
                                 <span class="stat-label">Topics Covered</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-value" id="infoLastUpdated">Sept. 2025</span>
+                                <span class="stat-value" id="infoLastUpdated">Oct 2025</span>
                                 <span class="stat-label">Latest Blog</span>
                             </div>
                         </div>

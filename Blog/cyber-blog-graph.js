@@ -10,7 +10,10 @@ class BlogGraphEngine {
             analystMode: 'INITIALIZING',
             isDragging: false,
             draggedNode: null,
-            mouseOffset: { x: 0, y: 0 }
+            mouseOffset: { x: 0, y: 0 },
+            searchQuery: '',
+            searchActive: false,
+            matchingNodes: []
         };
 
         // Dynamic configuration (no hardcoded values)
@@ -90,7 +93,10 @@ class BlogGraphEngine {
             postModal: '#postModal',
             modalTitle: '#modalTitle',
             modalBody: '#modalBody',
-            modalClose: '#modalClose'
+            modalClose: '#modalClose',
+            searchInput: '#blogSearchInput',
+            searchClearBtn: '#searchClearBtn',
+            searchResultsCount: '#searchResultsCount'
         };
 
         this.elements = {};
@@ -897,13 +903,20 @@ class BlogGraphEngine {
             });
         }
 
-        // Keyboard controls for modal
+        // Setup search functionality
+        this.setupSearchBar();
+
+        // Keyboard controls for modal and search
         console.log('⌨️ Setting up keyboard controls');
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 console.log('⌨️ Escape key pressed');
                 this.closeModal();
                 this.closeInfoModal();
+                // Clear search on Escape
+                if (this.state.searchActive) {
+                    this.clearSearch();
+                }
             }
         });
 
@@ -922,6 +935,181 @@ class BlogGraphEngine {
         });
 
         console.log('🎮 Controls setup complete');
+    }
+
+    /**
+     * Setup search bar functionality
+     */
+    setupSearchBar() {
+        if (!this.elements.searchInput) {
+            console.warn('⚠️ Search input not found');
+            return;
+        }
+
+        console.log('🔍 Setting up search bar...');
+
+        // Real-time search on input
+        this.elements.searchInput.addEventListener('input', (e) => {
+            const query = e.target.value.trim();
+            this.handleSearch(query);
+        });
+
+        // Clear button
+        if (this.elements.searchClearBtn) {
+            this.elements.searchClearBtn.addEventListener('click', () => {
+                this.clearSearch();
+            });
+        }
+
+        // Focus styling
+        this.elements.searchInput.addEventListener('focus', () => {
+            this.elements.searchInput.parentElement.classList.add('focused');
+        });
+
+        this.elements.searchInput.addEventListener('blur', () => {
+            this.elements.searchInput.parentElement.classList.remove('focused');
+        });
+
+        console.log('✅ Search bar setup complete');
+    }
+
+    /**
+     * Handle search query
+     */
+    handleSearch(query) {
+        this.state.searchQuery = query.toLowerCase();
+        
+        if (!query) {
+            this.clearSearch();
+            return;
+        }
+
+        console.log(`🔍 Searching for: "${query}"`);
+        this.state.searchActive = true;
+
+        // Show clear button
+        if (this.elements.searchClearBtn) {
+            this.elements.searchClearBtn.classList.add('visible');
+        }
+
+        // Find matching nodes
+        this.state.matchingNodes = this.nodes.filter(node => {
+            const post = node.post;
+            
+            // Search in title
+            if (post.title.toLowerCase().includes(this.state.searchQuery)) {
+                return true;
+            }
+            
+            // Search in description
+            if (post.description && post.description.toLowerCase().includes(this.state.searchQuery)) {
+                return true;
+            }
+            
+            // Search in category
+            if (post.category && post.category.toLowerCase().includes(this.state.searchQuery)) {
+                return true;
+            }
+            
+            // Search in topics array
+            if (post.topics && Array.isArray(post.topics)) {
+                return post.topics.some(topic => 
+                    topic.toLowerCase().includes(this.state.searchQuery)
+                );
+            }
+            
+            return false;
+        });
+
+        console.log(`✅ Found ${this.state.matchingNodes.length} matching nodes`);
+
+        // Update UI
+        this.applySearchFilter();
+        this.updateSearchResultsCount();
+
+        // Show notification if no results
+        if (this.state.matchingNodes.length === 0) {
+            this.showNotification(`No results found for "${query}"`);
+        }
+    }
+
+    /**
+     * Apply search filter to nodes
+     */
+    applySearchFilter() {
+        const container = this.elements.graphContainer;
+        if (!container) return;
+
+        const allNodeElements = container.querySelectorAll('.cyber-node');
+        
+        allNodeElements.forEach(nodeEl => {
+            const nodeId = parseInt(nodeEl.getAttribute('data-node-id'));
+            const isMatch = this.state.matchingNodes.some(n => n.id === nodeId);
+            
+            if (isMatch) {
+                // Add heartbeat animation to matching nodes
+                nodeEl.classList.add('search-match');
+                nodeEl.classList.remove('search-dimmed');
+            } else {
+                // Dim non-matching nodes
+                nodeEl.classList.add('search-dimmed');
+                nodeEl.classList.remove('search-match');
+            }
+        });
+    }
+
+    /**
+     * Update search results count display
+     */
+    updateSearchResultsCount() {
+        if (!this.elements.searchResultsCount) return;
+
+        const count = this.state.matchingNodes.length;
+        const total = this.nodes.length;
+
+        if (this.state.searchActive && count > 0) {
+            this.elements.searchResultsCount.textContent = `${count}/${total}`;
+            this.elements.searchResultsCount.classList.add('visible');
+        } else {
+            this.elements.searchResultsCount.classList.remove('visible');
+        }
+    }
+
+    /**
+     * Clear search and reset view
+     */
+    clearSearch() {
+        console.log('🧹 Clearing search...');
+        
+        this.state.searchQuery = '';
+        this.state.searchActive = false;
+        this.state.matchingNodes = [];
+
+        // Clear input
+        if (this.elements.searchInput) {
+            this.elements.searchInput.value = '';
+        }
+
+        // Hide clear button
+        if (this.elements.searchClearBtn) {
+            this.elements.searchClearBtn.classList.remove('visible');
+        }
+
+        // Hide results count
+        if (this.elements.searchResultsCount) {
+            this.elements.searchResultsCount.classList.remove('visible');
+        }
+
+        // Reset all nodes
+        const container = this.elements.graphContainer;
+        if (container) {
+            const allNodeElements = container.querySelectorAll('.cyber-node');
+            allNodeElements.forEach(nodeEl => {
+                nodeEl.classList.remove('search-match', 'search-dimmed');
+            });
+        }
+
+        console.log('✅ Search cleared');
     }
 
     /**
