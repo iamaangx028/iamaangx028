@@ -201,7 +201,7 @@
 }
 
 .cyber-node:hover::after {
-    content: "Click to access intelligence report";
+    content: "Click to view the details";
     position: absolute;
     top: -40px;
     left: 50%;
