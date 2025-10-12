@@ -180,7 +180,7 @@
     },
     "week13": {
       "title": "Week 13",
-      "description": "React Optimization Unleashed - master code splitting using lazy() and Suspense to load components on-demand instead of huge upfront bundles, understand minification stripping whitespace/comments/renaming functions (updateUserWhenCalledByIdOfRow→f) plus bundling multiple files reducing network requests, decode source map structure (version/sources/sourcesContent/mappings with VLQ Base64 encoding) mapping minified code back to originals, discover critical security risks of exposed source maps revealing API endpoints/secrets/business logic, analyze real bounties: $25k Stripe API leak and zero-click account takeover from undocumented endpoints in .map files, learn bug hunter techniques, bridging performance optimization with security attack surface discovery.",
+      "description": "React Optimization Unleashed - master code splitting using lazy() and Suspense to load components on-demand instead of huge upfront bundles, understand minification, decode source map structure (version/sources/sourcesContent/mappings with VLQ Base64 encoding) mapping minified code back to originals, discover critical security risks of exposed source maps revealing API endpoints/secrets/business logic, analyze real bounties: $25k Stripe API leak and zero-click account takeover from undocumented endpoints in .map files, learn bug hunter techniques, bridging performance optimization with security attack surface discovery.",
       "blogUrl": "https://medium.com/@iamaangx028/week-13-react-optimization-code-splitting-bundling-source-map-risks-962c08435a83",
       "sector": "Front-end security",
       "date": "Oct 12, 2025",
