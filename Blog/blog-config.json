@@ -2,10 +2,10 @@
   "settings": {
     "title": "Weekly Blog Hub",
     "description": "Interactive cybersecurity blog integrated with iamaangx028's main portfolio",
-    "version": "1.0.2",
-    "lastUpdated": "2025-10-12",
+    "version": "1.0.3",
+    "lastUpdated": "2025-10-21",
     "autoSort": "by-week",
-    "nextWeekId": "week14",
+    "nextWeekId": "week15",
     "integration": {
       "mainPortfolio": "../index.html#blog",
       "jarvisSupport": true,
@@ -187,6 +187,18 @@
       "difficulty": "Intermediate",
       "readTime": "7 min",
       "topics": ["Code Splitting", "Lazy Loading", "Bundling", "Minification", "Source Maps", "React Optimization", "bug bounty tips", "Security Risks"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week14": {
+      "title": "Week 14",
+      "description": "Understanding Redux & Fingerprinting Bundlers - learn to identify Webpack, Vite, and Rollup from minified JavaScript by recognizing unique fingerprints (__webpack_require__, import.meta.hot, ES module patterns), master Redux state management fundamentals (Store/Reducer/Dispatch/Actions) with bank vault analogy, discover JavaScript enumeration priorities (API endpoints, hardcoded credentials, hidden features, source maps), understand DOM-based vulnerabilities tracing user-controlled data from sources (location.hash, location.search) to dangerous sinks (eval(), innerHTML, document.write()), building complete JS enumeration methodology for bug hunting critical vulnerabilities.",
+      "blogUrl": "https://iamaangx028.medium.com/week-14-understanding-redux-fingerprinting-bundlers-cdba4a83fc7e",
+      "sector": "Front-end security",
+      "date": "Oct 21, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "7 min",
+      "topics": ["Webpack", "Vite", "Rollup", "Bundler Fingerprinting", "Redux", "State Management", "JavaScript Enumeration", "DOM XSS", "bug bounty tips"],
       "category": "web-security",
       "status": "published"
     }
