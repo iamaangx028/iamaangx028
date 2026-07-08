@@ -1,0 +1,278 @@
+{
+  "settings": {
+    "title": "Weekly Blog Hub",
+    "description": "Interactive cybersecurity blog integrated with iamaangx028's main portfolio",
+    "version": "1.0.9",
+    "lastUpdated": "2026-01-01",
+    "autoSort": "by-week",
+    "nextWeekId": "week21",
+    "integration": {
+      "mainPortfolio": "../index.html#blog",
+      "jarvisSupport": true,
+      "keyboardShortcuts": ["Ctrl+B"],
+      "crossNavigation": true
+    }
+  },
+  "sectors": {
+    "general": {
+      "name": "CYBERSECURITY INTELLIGENCE", 
+      "description": "Security research and analysis",
+      "color": "#00f5ff",
+      "threshold": 0
+    }
+  },
+  "template": {
+    "title": "Your Blog Title Here",
+    "description": "Brief description of your blog post content and key learning points",
+    "blogUrl": "http://iamaangx028.medium.com/",
+    "sector": "general",
+    "date": "YYYY-MM-DD",
+    "difficulty": 3,
+    "readTime": "10 min read",
+    "topics": ["Topic1", "Topic2", "Topic3"],
+    "category": "web-security",
+    "status": "published"
+  },
+  "posts": {
+    "week1": {
+      "title": "Blog 1 ",
+      "description": "The OSI Journey begins with 7 layers of network magic - from Application to Physical. Learn how data transforms through each layer, understand TCP/IP's practical dominance over OSI, master subnetting to divide networks efficiently with CIDR notation, and discover how DNS acts as the internet's phonebook converting domain names to IP addresses through recursive resolvers and authoritative servers.",
+      "blogUrl": "https://infosecwriteups.com/week-1-learning-basic-concepts-of-cybersecurity-417434e71752",
+      "sector": "Network",
+      "date": "Jun 22, 2025",
+      "difficulty": "Beginner",
+      "readTime": "10 min",
+      "topics": ["OSI Model", "TCP/IP", "Subnetting", "DNS"],
+      "category": "network-security",
+      "status": "published"
+    },
+    "week2": {
+      "title": "Blog 2 ",
+      "description": "Journey from PAN to WAN network types, understand how hubs broadcast blindly while switches route intelligently using MAC addresses, discover why routers are passport officers connecting different networks, learn wireless security evolution from vulnerable WEP to secure WPA3, explore ARP poisoning MITM attacks, master SSL/TLS handshakes using both asymmetric and symmetric encryption, and compare TCP's reliable connection-oriented approach vs UDP's fast connectionless transmission.",
+      "blogUrl": "https://iamaangx028.medium.com/week-2-learning-basic-concepts-of-cybersecurity-6e7fd6d57bbf",
+      "sector": "Network",
+      "date": "Jun 28, 2025",
+      "difficulty": "Beginner",
+      "readTime": "15 min",
+      "topics": ["Networks", "Hubs", "Switches", "Routers", "SSL/TLS", "ARP"],
+      "category": "network-security",
+      "status": "published"
+    },
+    "week3": {
+      "title": "Blog 3",
+      "description": "Browser Wars unveiled - Internet vs WWW clarified (highway vs cars analogy), browser evolution from WorldWideWeb to Chrome dominance, deep dive into browser architecture with rendering engine creating DOM/CSSOM/Render Tree, understand SOP (Same-Origin Policy) protecting you since Netscape Navigator 2, learn CSP directives controlling resource loading, explore browser sandboxing with Parent/Child process isolation preventing drive-by downloads, and master CORS for controlled cross-origin resource sharing.",
+      "blogUrl": "https://iamaangx028.medium.com/week-3-learning-basic-concepts-of-cybersecurity-c68a72096e07",
+      "sector": "Browser",
+      "date": "Jul 6, 2025",
+      "difficulty": "Beginner",
+      "readTime": "16 min",
+      "topics": ["Browsers", "Rendering", "DOM", "CSSOM", "Omnibox"],
+      "category": "browser-security",
+      "status": "published"
+    },
+    "week4": {
+      "title": "Blog 4",
+      "description": "Cookies & Browser Security unleashed - compare LocalStorage/SessionStorage/Cookies/IndexedDB storage types, implement Subresource Integrity (SRI) using SHA384 hashes to verify third-party resources, understand SameSite cookie attribute preventing CSRF (Lax vs Strict vs None), use HttpOnly to block JavaScript cookie access stopping XSS theft, set Secure flag for HTTPS-only transmission, enforce strict MIME type checking preventing content-type confusion attacks, and deploy X-Frame-Options defending against clickjacking.",
+      "blogUrl": "https://infosecwriteups.com/week-4-learning-basic-concepts-of-cybersecurity-bac604938cb7",
+      "sector": "Browser",
+      "date": "Jul 11, 2025",
+      "difficulty": "Beginner",
+      "readTime": "9 min",
+      "topics": ["Cookies", "SRI", "MIME", "Clickjacking", "SOP"],
+      "category": "browser-security",
+      "status": "published"
+    },
+    "week5": {
+      "title": "Blog 5 ",
+      "description": "HTTP's Epic Evolution - HTTP/0.9 with just GET requests, HTTP/1.0 introducing POST/status codes/headers, HTTP/1.1 adding persistent connections and pipelining but suffering head-of-line blocking, HTTP/2.0 revolutionizing with binary framing/multiplexing/header compression using HPACK solving HOL blocking, HTTP/3.0 switching from TCP to QUIC over UDP for better performance. Learn SSL/TLS evolution from Netscape, understand content negotiation (server-driven vs agent-driven), and discover how Burp Suite MITMs HTTPS traffic.",
+      "blogUrl": "https://infosecwriteups.com/week-5-learning-basic-concepts-of-cybersecurity-ae310b92ab71",
+      "sector": "HTTP",
+      "date": "Jul 20, 2025",
+      "difficulty": "Beginner",
+      "readTime": "11 min",
+      "topics": ["HTTP", "TLS", "Content Negotiation", "Caching"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week6": {
+      "title": "Blog 6 ",
+      "description": "System Design Secrets revealed - forward proxy protects clients while reverse proxy shields servers, understand REST API stateless nature vs GraphQL's efficient querying, scale vertically by upgrading specs or horizontally by adding servers, implement load balancers distributing traffic intelligently, use database indexing/sharding/replication for performance, leverage CDNs reducing latency globally, employ WebSockets for real-time bidirectional communication, utilize webhooks for event-driven data transfer, architect microservices with message queues (RabbitMQ/Kafka), protect with API gateways handling auth/rate limiting/idempotency, and master NGINX capabilities as web server/reverse proxy/load balancer.",
+      "blogUrl": "https://infosecwriteups.com/week-6-learning-basic-concepts-of-cybersecurity-d2a27e136f24",
+      "sector": "Infrastructure",
+      "date": "Jul 27, 2025",
+      "difficulty": "Beginner",
+      "readTime": "14 min",
+      "topics": ["Proxies", "APIs", "CDN", "WebSockets", "Microservices"],
+      "category": "infra-security",
+      "status": "published"
+    },
+    "week7": {
+      "title": "Blog 7 ",
+      "description": "Architectural Alchemy of modern web apps - compare client-server vs monolithic (single entity) vs microservices (independent services with separate DBs) vs serverless (pay-as-you-go cloud), understand MVC pattern where Controller acts as postman between Model and View, explore Service-oriented Architecture utilizing third-party services, contrast SPA (Single Page App loading once) vs MPA (Multi-Page App requesting each page) vs PWA (Progressive Web App like native), master 3-tier architecture separating Presentation/Application/Data layers, and review frontend (HTML/CSS/JS with React/Angular/Vue) and backend (PHP/Python/Java/Ruby with Laravel/Django/Spring Boot) technology stacks.",
+      "blogUrl": "https://infosecwriteups.com/week-7-learning-basic-concepts-of-cybersecurity-09b4170209d1",
+      "sector": "Web Development",
+      "date": "Aug 1, 2025",
+      "difficulty": "Beginner",
+      "readTime": "7 min",
+      "topics": ["Architecture", "Client-Server", "Microservices", "Serverless", "MVC", "SPA"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week8": {
+      "title": "Blog 8 ",
+      "description": "Header Heroes - HTTP's secret security weapons decoded: Authorization header for credentials, Access-Control-Allow-Origin/Credentials/Methods for CORS configuration, Accept/Content-Type/Content-Length for representation negotiation, Cookie/Set-Cookie for state management, Connection/Upgrade for protocol handling, Location for redirects, Content-Security-Policy directives (default-src/script-src/img-src) blocking XSS, ETag/If-None-Match for cache validation, Cache-Control directives (private/public/no-store/max-age) optimizing performance, Strict-Transport-Security enforcing HTTPS-only, X-Frame-Options preventing clickjacking, and comprehensive list of 65+ headers with security implications.",
+      "blogUrl": "https://iamaangx028.medium.com/week-8-learning-basic-concepts-of-cybersecurity-77c6e4d588c5",
+      "sector": "HTTP Security",
+      "date": "Sep 7, 2025",
+      "difficulty": "Beginner",
+      "readTime": "10 min",
+      "topics": ["HTTP Headers", "CORS", "HSTS", "CSP", "Caching"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week9": {
+      "title": "Blog 9",
+      "description": "Frontend meets Backend battlefield - evolution from static HTML to dynamic sites via CGI (Common Gateway Interface) spawning processes per request, transition to application servers (Gunicorn/PHP-FPM/Tomcat/Kestrel) keeping frameworks alive, backend stack with PHP/Java/Python/Ruby/JavaScript and frameworks (Laravel/Spring Boot/Django/Rails/Node.js), understand flow: Browser→Web Server (Nginx)→App Server→Framework→Database→Response, frontend JavaScript executed by browser's JS engine following ECMAScript standards, compare Angular (full framework), React (UI library), Vue (lightweight) and meta-frameworks Next.js/Nuxt.js adding SSR/SSG capabilities.",
+      "blogUrl": "https://iamaangx028.medium.com/week-9-learning-basic-concepts-of-cybersecurity-dea9932c4a0f",
+      "sector": "Front-end & Back-end",
+      "date": "Sep 14, 2025",
+      "difficulty": "Beginner", 
+      "readTime": "7 min",
+      "topics": ["Front-end", "Back-end", "Frameworks", "App Servers", "CGI"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week10": {
+      "title": "Blog 10",
+      "description": "JavaScript Journeys - Vanilla JS is pure unflavored JavaScript without frameworks (all tools built on this), JSX combines JavaScript + HTML in React (write Hello inside functions), AJAX (Asynchronous JavaScript and XML) using XMLHttpRequest or modern fetch()/axios for no-reload data loading, Components are reusable independent building blocks (functional or class-based returning JSX), and SPA (Single Page Application) routing with react-router-dom changing URL/components without page reloads like a movie theater changing scenes on one screen - understanding these patterns helps discover hidden API endpoints and client-side vulnerabilities.",
+      "blogUrl": "https://iamaangx028.medium.com/week-10-learning-basic-concepts-of-cybersecurity-1638b6b19c84",
+      "sector": "Front-end security",
+      "date": "Sep 21, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "4 min",
+      "topics": ["Vanilla JS", "JSX", "AJAX", "Components", "Routing", "SPA"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week11": {
+      "title": "Blog 11",
+      "description": "React Core Concepts mastered - Virtual DOM solves expensive browser DOM manipulation by keeping lightweight JavaScript representation in memory, comparing old vs new virtual DOM (Reconciliation), then applying minimal changes to real DOM, Props pass read-only data from parent to child components enabling dynamic reusability, State (useState hook) is component's memory auto-triggering re-renders when changed via setter functions, Controlled Components (value + onChange) validate instantly as you type showing real-time errors, Uncontrolled Components (ref) only validate on submission causing page reloads - understanding these patterns crucial for identifying client-side attack vectors in modern React applications.",
+      "blogUrl": "https://iamaangx028.medium.com/week-11-learning-basic-concepts-of-cybersecurity-0316beed3df7",
+      "sector": "Front-end security",
+      "date": "Sep 28, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "5 min",
+      "topics": ["Dom Manipulation", "State Management", "APIs", "Props", "Uncontrolled Component", "Controlled Component","SPA"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week12": {
+      "title": "Blog 12",
+      "description": "Async API Calls: Fetch, Axios, and Promises - Learn how to handle asynchronous operations in JavaScript using Fetch API and Axios library, along with understanding Promises for better error handling and code readability.",
+      "blogUrl": "https://medium.com/@iamaangx028/week-12-async-api-calls-fetch-axios-and-promises-f8da63c5d91c",
+      "sector": "Front-end security",
+      "date": "Oct 5, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "4 min",
+      "topics": ["Async", "API Calls", "Fetch", "Axios", "Promises", "bug bounty tips", "javascript tips"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week13": {
+      "title": "Blog 13",
+      "description": "React Optimization Unleashed - master code splitting using lazy() and Suspense to load components on-demand instead of huge upfront bundles, understand minification, decode source map structure (version/sources/sourcesContent/mappings with VLQ Base64 encoding) mapping minified code back to originals, discover critical security risks of exposed source maps revealing API endpoints/secrets/business logic, analyze real bounties: $25k Stripe API leak and zero-click account takeover from undocumented endpoints in .map files, learn bug hunter techniques, bridging performance optimization with security attack surface discovery.",
+      "blogUrl": "https://medium.com/@iamaangx028/week-13-react-optimization-code-splitting-bundling-source-map-risks-962c08435a83",
+      "sector": "Front-end security",
+      "date": "Oct 12, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "7 min",
+      "topics": ["Code Splitting", "Lazy Loading", "Bundling", "Minification", "Source Maps", "React Optimization", "bug bounty tips", "Security Risks"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week14": {
+      "title": "Blog 14",
+      "description": "Understanding Redux & Fingerprinting Bundlers - learn to identify Webpack, Vite, and Rollup from minified JavaScript by recognizing unique fingerprints (__webpack_require__, import.meta.hot, ES module patterns), master Redux state management fundamentals (Store/Reducer/Dispatch/Actions) with bank vault analogy, discover JavaScript enumeration priorities (API endpoints, hardcoded credentials, hidden features, source maps), understand DOM-based vulnerabilities tracing user-controlled data from sources (location.hash, location.search) to dangerous sinks (eval(), innerHTML, document.write()), building complete JS enumeration methodology for bug hunting critical vulnerabilities.",
+      "blogUrl": "https://iamaangx028.medium.com/week-14-understanding-redux-fingerprinting-bundlers-cdba4a83fc7e",
+      "sector": "Front-end security",
+      "date": "Oct 21, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "7 min",
+      "topics": ["Webpack", "Vite", "Rollup", "Bundler Fingerprinting", "Redux", "State Management", "JavaScript Enumeration", "DOM XSS", "bug bounty tips"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week15": {
+      "title": "Blog 15",
+      "description": "Automating JS enumeration for bug hunters: a three-phase methodology (gather → download → analyze) that glues existing tools (jsluice, xnLinkFinder, gau, waybackurls, hakrawler) together, emphasizes deduplication, memory-efficient streaming downloads, smart analysis (TruffleHog, regex, image separation), sourcemap handling, intelligent URL construction, modular design, and save-state support for reliable large-scale static JS analysis.",
+      "blogUrl": "https://medium.com/bugbountywriteup/week-15-automated-js-enum-methodology-architecture-31becf8693ec",
+      "sector": "JS Enumeration",
+      "date": "Oct 27, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "7 min",
+      "topics": ["JS Automation", "jsenum", "jsluice", "xnLinkFinder", "gau", "waybackurls", "hakrawler", "TruffleHog", "sourcemaps", "deduplication", "architecture"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week16": {
+      "title": "Blog 16",
+      "description": "JSArvis Framework in action - from blueprint to reality: built Burp Suite integration (jsenum_exporter.py) for exporting cached JS responses, added Katana/Subjs/GoSpider/HTML scraper to gatherer toolset, implemented scope validation with wildcard support, created download resume capability with persistent state management, integrated TruffleHog for secret detection with custom regex and two-phase fast/verify workflow, achieved 98.3% noise reduction through multi-level deduplication (URL/content-hash/finding-level), fixed Hakrawler redirect issues, and successfully discovered real secrets (emails, phone numbers, senior dev credentials) in production targets - JavaScript Analysis, Reconnaissance, & Vulnerability Intelligence System.",
+      "blogUrl": "https://iamaangx028.medium.com/week-16-js-enum-framework-from-blueprint-to-reality-092aea4eaf4f",
+      "sector": "JS Enumeration",
+      "date": "Nov 3, 2025",
+      "difficulty": "Advanced",
+      "readTime": "9 min",
+      "topics": ["JSArvis Framework", "Burp Suite Integration", "TruffleHog", "Katana", "GoSpider", "Subjs", "deduplication", "scope validation", "resume capability", "secret detection", "bug bounty"],
+      "category": "web-security",
+      "status": "published"
+    },
+    "week17": {
+      "title": "Blog 17",
+      "description": "A practical guide to OAuth2: learn how the Authorization Code flow works (user → authorization server → client exchanges code for token), why PKCE strengthens mobile and public clients, how the implicit flow exposes tokens in browsers and why it's discouraged, common pitfalls (redirect URI manipulation, missing state causing CSRF, token leakage in URLs), and mitigation patterns including using state, PKCE, secure storage, and short-lived access tokens with refresh token rotation.",
+      "blogUrl": "https://iamaangx028.medium.com/week-17-understanding-oauth2-authorization-code-implicit-flows-b6bd857b8926",
+      "sector": "Authentication",
+      "date": "Nov 10, 2025",
+      "difficulty": "Intermediate",
+      "readTime": "10 min",
+      "topics": ["OAuth2", "Authorization Code", "Implicit Flow", "PKCE", "Redirect URI", "CSRF"],
+      "category": "auth-security",
+      "status": "published"
+    },
+    "week18": {
+      "title": "AD Chapter 1",
+      "description": "Active Directory foundations: why AD exists to centralize identity, policy, and access across enterprises; the hierarchy from forests and domains to OUs and objects; the Domain Controller role and replication; and authentication basics comparing NTLM challenge-response with Kerberos ticketing (AS/TGS, TGT, service tickets), including common weaknesses and why Kerberos is preferred.",
+      "blogUrl": "https://osintteam.blog/chapter-1-introduction-to-active-directory-34df1bbaf117",
+      "sector": "Active Directory",
+      "date": "Jan 01, 2026",
+      "difficulty": "Beginner",
+      "readTime": "8 min",
+      "topics": ["Active Directory", "Forest", "Domain", "Organizational Units", "Domain Controller", "NTLM", "Kerberos", "Authentication"],
+      "category": "active-directory",
+      "status": "published"
+    },
+    "week19": {
+      "title": "AD Chapter 2",
+      "description": "Map the AD attack surface by connecting authentication to real movement: how attackers leverage SMB/ADMIN$ shares, WinRM PowerShell remoting, and LDAP enumeration to move laterally; what the four core objects (Users, Groups, Computers, Service Accounts) expose; why SPNs make service accounts prime Kerberoast targets; and how default shares plus protocol abuse can escalate a single credential into full domain control.",
+      "blogUrl": "https://osintteam.blog/chapter-2-the-ad-attack-surface-5ba8a56da958",
+      "sector": "Active Directory",
+      "date": "Jan 01, 2026",
+      "difficulty": "Beginner",
+      "readTime": "6 min",
+      "topics": ["Active Directory", "SMB", "WinRM", "LDAP", "Users", "Groups", "Computers", "Service Accounts", "SPN", "Kerberoasting"],
+      "category": "active-directory",
+      "status": "published"
+    },
+    "week20": {
+      "title": "AD Chapter 3",
+      "description": "Group Policy fundamentals (GPC metadata + GPT SYSVOL files), how GPO scope and permissions drive fleet-wide enforcement, and Kerberos privilege escalation concepts (Kerberoasting, AS-REP roasting, delegation abuse: unconstrained, constrained, RBCD) as theoretical groundwork for later hands-on chapters.",
+      "blogUrl": "https://iamaangx028.medium.com/chapter-3-policies-escalation-3e927eb5abf1",
+      "sector": "Active Directory",
+      "date": "Jan 01, 2026",
+      "difficulty": "Beginner",
+      "readTime": "6 min",
+      "topics": ["Group Policy", "GPO", "SYSVOL", "Kerberoasting", "AS-REP Roasting", "Delegation", "Unconstrained Delegation", "RBCD"],
+      "category": "active-directory",
+      "status": "published"
+    }
+  }
+}

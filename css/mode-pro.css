@@ -1,0 +1,58 @@
+/*
+ * PROFESSIONAL MODE overrides
+ * Same brand palette (cyan-on-dark) — this ONLY reduces theatrics.
+ * Every rule is scoped to [data-mode="pro"]; Hacker mode (default markup)
+ * is untouched. Attribute lives on <html> (see the no-flash head script).
+ */
+
+/* --- Prose font: readable sans in Professional mode only ---
+   All body/paragraph text resolves through var(--font-body) (Roboto Mono in
+   Hacker mode). Overriding the variable at the root swaps only prose to Inter;
+   headings (var(--font-display)/Quantico) and labels/terminal (var(--font-mono))
+   are unaffected. Scoped to :root[data-mode="pro"] so Hacker mode is untouched. */
+:root[data-mode="pro"] {
+    --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* --- Decorative overlays & animations (pure chrome) --- */
+[data-mode="pro"] .terminal-auth,
+[data-mode="pro"] .security-mesh,
+[data-mode="pro"] .security-level,
+[data-mode="pro"] .security-scan-overlay,
+[data-mode="pro"] .scanner-beam,
+[data-mode="pro"] .scan-line-element,
+[data-mode="pro"] .hud-frame,
+[data-mode="pro"] .hud-overlay,
+[data-mode="pro"] .file-header {
+    display: none !important;
+}
+
+/* --- Invented "credibility" markers (fake IDs, clearance, classified tags) --- */
+[data-mode="pro"] .cert-id,
+[data-mode="pro"] .cert-level,
+[data-mode="pro"] .intel-id,
+[data-mode="pro"] .intel-status,
+[data-mode="pro"] .hud-top-left,
+[data-mode="pro"] .hud-bottom-right,
+[data-mode="pro"] .access-note {
+    display: none !important;
+}
+
+/* --- Self-assigned skill percentages / meters -> keep the names + level words --- */
+[data-mode="pro"] .skill-progress-container,
+[data-mode="pro"] .skill-details,
+[data-mode="pro"] .tool-meter-container {
+    display: none !important;
+}
+
+/* Tool cards become a clean labelled grid once the meters are gone */
+[data-mode="pro"] .tool-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 64px;
+    padding: 14px 18px;
+}
+[data-mode="pro"] .tool-name {
+    margin-top: 0;
+}

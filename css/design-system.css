@@ -1,0 +1,178 @@
+/* 
+ * IAMAANGX028 - Central Design System
+ * Unifies the Cyber/Jarvis Aesthetic across Portfolio and Blog
+ */
+
+:root {
+    /* Core Palette - Cyberpunk/Sci-Fi */
+    --cyber-primary: #00f5ff;
+    --cyber-secondary: #0080ff;
+    --cyber-accent: #64ffda;
+    --cyber-warning: #ff6b35;
+    --cyber-danger: #ff0055;
+    --cyber-success: #4caf50;
+
+    /* Backgrounds - Deep Space */
+    --bg-dark: #000814;
+    --bg-panel: rgba(0, 20, 40, 0.95);
+    --bg-glass: rgba(0, 245, 255, 0.05);
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b0bec5;
+    --text-muted: #546e7a;
+
+    /* Effects */
+    --glow-primary: 0 0 20px rgba(0, 245, 255, 0.5);
+    --glow-text: 0 0 10px rgba(0, 245, 255, 0.8);
+    --border-glow: 0 0 10px rgba(0, 245, 255, 0.3);
+
+    /* Borders */
+    --border-light: rgba(0, 245, 255, 0.3);
+    --border-dim: rgba(0, 245, 255, 0.1);
+
+    /* Typography */
+    --font-tech: 'Quantico', sans-serif;
+    /* headings/display — unchanged */
+    --font-mono: 'Roboto Mono', monospace;
+    /* tech/data labels — unchanged */
+    /* Body / normal text uses the Apple system font (real San Francisco on
+       macOS/iOS); Inter is kept as the cross-platform fallback. */
+    --font-body: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display', 'Segoe UI', 'Inter', Roboto, Helvetica, Arial, sans-serif;
+
+    /* Corner Radius — Apple-inspired continuous, consistent rounding.
+       Squircle feel via a single deliberate scale; never sharp, never
+       arbitrary. Circles (avatars, dots) keep 50%; everything box-like
+       maps onto one of these tokens. */
+    --radius-xs: 6px;
+    /* pips, tiny squares */
+    --radius-sm: 10px;
+    /* tags, badges, chips, small controls */
+    --radius-md: 14px;
+    /* buttons, inputs, list items */
+    --radius-lg: 20px;
+    /* cards, panels */
+    --radius-xl: 28px;
+    /* large containers, modals, hero panels */
+    --radius-pill: 999px;
+    /* toggles, fully-rounded pills */
+    --radius-round: 50%;
+    /* circles: avatars, status dots, icon bubbles */
+}
+
+/* Global Reset & Base */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-tech);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--cyber-secondary);
+    border-radius: var(--radius-sm);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--cyber-primary);
+}
+
+/* Utility Classes */
+.text-cyber {
+    color: var(--cyber-primary);
+}
+
+.text-accent {
+    color: var(--cyber-accent);
+}
+
+.text-warn {
+    color: var(--cyber-warning);
+}
+
+.cyber-border {
+    border: 1px solid var(--border-light);
+    box-shadow: var(--border-glow);
+}
+
+.cyber-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border-light);
+    backdrop-filter: blur(10px);
+}
+
+.cyber-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid var(--cyber-primary);
+    color: var(--cyber-primary);
+    font-family: var(--font-tech);
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.cyber-btn:hover {
+    background: rgba(0, 245, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.cyber-btn.filled {
+    background: var(--cyber-primary);
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+.cyber-btn.filled:hover {
+    background: white;
+    box-shadow: 0 0 30px rgba(0, 245, 255, 0.6);
+}

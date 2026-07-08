@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Dashboard | Self Paced Learning</title>
+
+    <!-- Mode locked to Hacker (Pro mode + toggle temporarily disabled; see ../js/mode.js) -->
+    <script>document.documentElement.dataset.mode='hacker';</script>
+
+    <!-- Core Design System -->
+    <link rel="stylesheet" href="../css/design-system.css">
+    <link rel="stylesheet" href="../css/mode-pro.css">
+
+    <!-- Blog Specific Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/journey.css">
+
+    <!-- Fonts (Google Fonts) — shared type ramp with the main portfolio -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quantico:wght@400;700&family=Roboto+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Tactical Overlay Grid -->
+    <div class="tactical-grid-overlay"></div>
+
+    <header class="mission-control-header">
+        <div class="header-left">
+            <a href="../index.html" class="nav-btn back-btn">
+                <span class="icon">❮</span>
+                <span class="text">Main Profile</span>
+            </a>
+            <!-- <div class="breadcrumb">
+                <span class="segment">SYSTEM</span>
+                <span class="separator">></span>
+                <span class="segment active">MISSION_LOGS</span>
+            </div> -->
+        </div>
+
+        <div class="header-center">
+            <h1 class="mission-title" data-text="Self Paced Learning Blog">Self Paced Learning Blog</h1>
+        </div>
+
+        <div class="header-right">
+        </div>
+    </header>
+
+    <main class="mission-dashboard">
+
+        <!-- Filter Control Panel -->
+        <section class="control-panel">
+            <div class="search-module">
+                <div class="input-wrapper">
+                    <span class="input-icon">🔍</span>
+                    <input type="text" id="missionSearch" placeholder="SEARCH QUERY...">
+                    <button id="clearSearch" class="clear-btn">✖</button>
+                </div>
+            </div>
+
+            <div class="filter-module" id="categoryFilters">
+                <!-- Filters injected by JS -->
+            </div>
+        </section>
+
+        <!-- Mission Grid -->
+        <section class="mission-grid-container">
+            <div id="missionGrid" class="journey">
+                <!-- Mission Cards Injected Here -->
+            </div>
+
+            <div id="noResults" class="no-results hidden">
+                <div class="error-box">
+                    <div class="error-code">404_DATA_NOT_FOUND</div>
+                    <div class="error-msg">NO MATCHING BLOGS FOUND</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mission Briefing Modal -->
+    <div id="missionModal" class="modal-overlay">
+        <div class="modal-content glass-panel">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <div class="modal-classification">DIFFICULTY LEVEL <span id="modalLevel">1</span></div>
+                    <h2 id="modalTitle" class="modal-mission-name">BLOG TITLE</h2>
+                </div>
+                <button id="modalClose" class="close-btn">✖</button>
+            </div>
+
+            <div class="modal-body">
+                <div class="mission-intel-grid">
+                    <div class="intel-item">
+                        <span class="label">SECTOR</span>
+                        <span id="modalCategory" class="value">NETWORK</span>
+                    </div>
+                    <div class="intel-item">
+                        <span class="label">DATE</span>
+                        <span id="modalDate" class="value">2024-01-01</span>
+                    </div>
+                    <div class="intel-item">
+                        <span class="label">EST. TIME</span>
+                        <span id="modalTime" class="value">45 MIN</span>
+                    </div>
+                </div>
+
+                <div class="mission-briefing">
+                    <h3>BLOG BRIEFING</h3>
+                    <p id="modalDescription">Mission description goes here...</p>
+                </div>
+
+                <div class="mission-tags" id="modalTags">
+                    <!-- Tags injected here -->
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <a id="modalLink" href="#" target="_blank" class="launch-btn">
+                    <span class="btn-text">INITIATE A GET REQUEST TO BLOG</span>
+                    <span class="btn-glitch"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Core Systems -->
+    <script src="../js/mode.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
